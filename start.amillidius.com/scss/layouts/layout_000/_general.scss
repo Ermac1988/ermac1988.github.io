@@ -1,0 +1,72 @@
+body {
+  font-size: $baseFontSize;
+  font-family: $openSans;
+  color: $black;
+  background-color: $white;
+  scrollbar-face-color: slategray;
+  scrollbar-track-color: #b8c0c8;
+}
+
+.hidden{
+  opacity:0;
+}
+.visible{
+  opacity:1;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: slategray;
+}
+
+::-webkit-scrollbar-track {
+  background: #b8c0c8;
+}
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $white;
+  z-index: 100500;
+}
+
+#page-preloader .spinner {
+  width: 80px;
+  height: 78px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url('../img/loading.gif') no-repeat 50% 50%;
+  margin: -16px 0 0 -16px;
+}
+
+.parallax {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  left: 0;
+  display: none;
+}
+
+.layer1 {
+  background: url(../img/header-layer-1.png) no-repeat 50% 40%;
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  margin-top: 50px;
+}
+.layer2 {
+  background: url(../img/header-layer-2.png) no-repeat 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  margin-left: 50px;
+}

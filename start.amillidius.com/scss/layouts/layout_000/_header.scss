@@ -1,0 +1,44 @@
+.header {
+  background: $white url(../img/header-bg-new.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  padding: 160px 0;
+}
+
+.header-box {
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(flex-start);
+
+  @include e(logo) {
+    margin-bottom: 50px;
+  }
+
+  @include e(img) {
+    margin-bottom: 50px;
+  }
+
+  @include e(text) {
+    font-size: rem(30px);
+    font-family: $openSans;
+    font-weight: 400;
+    color: #15191c;
+    margin-bottom: 50px;
+
+  }
+
+  @include e(button) {
+    font-size: rem(32px);
+    font-family: $openSans;
+    font-weight: 700;
+    color: $white;
+    padding: 15px 60px;
+    background-color: $pinkButton;
+    border-radius: 20px;
+
+    &:hover, &:focus {
+      background-color: $blueText;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.footer {
+  background: $blackBackground;
+  padding: 90px 0;
+}
+
+.footer-box {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include align-items(center);
+
+  @include e(logo) {
+  }
+
+  @include e(copyright) {
+    font-size: rem(12px);
+    font-family: $openSans;
+    font-weight: 400;
+    color: $white;
+    margin: 0;
+  }
+}
+
+#scrollTop {
+  font-size: rem(50px);
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: $pinkText;
+  color: $white;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $blueText;
+  }
+}

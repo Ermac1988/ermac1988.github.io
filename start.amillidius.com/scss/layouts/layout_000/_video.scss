@@ -1,0 +1,29 @@
+.video {
+  background: $blackBackground;
+  padding: 90px 0;
+}
+
+.video-box {
+
+  @include e(title) {
+    font-size: rem(36px);
+    font-family: $openSans;
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+
+    & span {
+      color: $blueText;
+    }
+  }
+
+  @include e(video) {
+    margin: 0 auto;
+
+    &>div {
+      min-height: 400px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.services {
+  background: $white url(../img/services-bg.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  padding: 90px 0;
+}
+
+.services-box {
+  @include display(flex);
+  @include flex-direction(column);
+
+  @include e(title) {
+    font-size: rem(36px);
+    font-family: $openSans;
+    font-weight: 700;
+    color: $black;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+
+    & span {
+      color: $blueText;
+    }
+  }
+
+  @include e(content) {
+    margin-bottom: 50px;
+  }
+
+  @include e(button) {
+    font-size: rem(32px);
+    font-family: $openSans;
+    font-weight: 700;
+    color: $white;
+    padding: 15px 60px;
+    background-color: $pinkButton;
+    /*border: 1px solid $pinkButton;*/
+    border-radius: 20px;
+    @include align-self(center);
+
+    &:hover, &:focus {
+      background-color: $blueText;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+.services-items-box {
+
+  @include e(item) {
+    @include display(flex);
+    @include flex-direction(row);
+
+    & div {
+      @include display(flex);
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include align-items(center);
+      width: 70px;
+      height: 70px;
+      background-color: $black;
+      border-radius: 50%;
+      margin-right: 20px;
+      padding: 15px;
+    }
+
+    & p {
+      font-size: $baseFontSize;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $black;
+      min-height: 226px;
+      margin: 0;
+
+      & span {
+        font-size: $baseFontSize;
+        font-family: $openSans;
+        font-weight: 700;
+        color: $black;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

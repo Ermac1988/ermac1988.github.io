@@ -1,0 +1,10 @@
+.video-box {
+
+  @include e(video) {
+    padding: 0 115px;
+
+    &>div {
+      min-height: 545px;
+    }
+  }
+}

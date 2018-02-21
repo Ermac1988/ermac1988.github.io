@@ -1,0 +1,131 @@
+.form {
+  background: url("../img/form-bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 90px 0;
+}
+
+.form-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px 0;
+
+  @include e(text) {
+    font-size: $baseFontSize;
+    font-family: $openSans;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  @include e(title) {
+    font-size: rem(24px);
+    font-family: $openSans;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 45px;
+
+    & span {
+      font-size: rem(24px);
+      font-family: $openSans;
+      font-weight: 700;
+      color: $blueText;
+      text-transform: uppercase;
+    }
+  }
+
+  @include e(form) {
+    padding: 0 30px;
+
+    & label {
+      font-size: rem(14px);
+      font-family: $openSans;
+      font-weight: 400;
+      color: $white;
+      background-color: black;
+      border-radius: 10px 0 0 10px;
+      padding: 15px;
+    }
+
+    & input {
+      border-radius: 0 10px 10px 0;
+
+      &::-webkit-input-placeholder {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      &::-moz-placeholder {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      &:-moz-placeholder {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      &:-ms-input-placeholder {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      &:focus::-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      &:focus:-moz-placeholder {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      &:focus:-ms-input-placeholder {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+    }
+
+    & button {
+      font-size: rem(32px);
+      font-family: $openSans;
+      font-weight: 700;
+      color: $white;
+      padding: 15px 60px;
+      background-color: $pinkButton;
+      border-radius: 20px;
+      border: none;
+      display: block;
+      margin: 45px auto 0;
+
+      &:hover {
+        background-color: $blueText;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include e(result) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+
+    & p {
+      font-size: rem(24px);
+      font-family: $openSans;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      text-align: center;
+
+      & span {
+        font-size: rem(24px);
+        font-family: $openSans;
+        font-weight: 700;
+        color: $blueText;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

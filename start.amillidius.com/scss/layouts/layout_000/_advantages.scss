@@ -1,0 +1,113 @@
+.advantages {
+  background-color: $white;
+  padding: 90px 0;
+}
+
+.advantages-box {
+  @include display(flex);
+  @include flex-direction(column);
+  @include flex-wrap(wrap);
+
+  @include e(title) {
+    font-size: rem(36px);
+    font-family: $openSans;
+    font-weight: 700;
+    color: $black;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+
+    & span {
+      color: $blueText;
+    }
+  }
+
+  @include e(quote) {
+    @include display(flex);
+    @include flex-direction(row);
+    margin-bottom: 50px;
+
+    & img {
+      margin-right: 30px;
+    }
+
+    & p {
+      font-size: $baseFontSize;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $black;
+      margin: 0;
+
+      & span {
+        font-size: $baseFontSize;
+        font-family: $openSans;
+        font-weight: 700;
+        color: $pinkText;
+        display: block;
+      }
+    }
+  }
+
+  @include e(content) {
+    margin-bottom: 50px;
+  }
+
+  @include e(button) {
+    font-size: rem(32px);
+    font-family: $openSans;
+    font-weight: 700;
+    color: $white;
+    padding: 15px 60px;
+    background-color: $pinkButton;
+    border-radius: 20px;
+    @include align-self(center);
+
+    &:hover, &:focus {
+      background-color: $blueText;
+      color: $white;
+      text-decoration: none;
+    }
+
+
+  }
+}
+
+.row-box {
+
+  @include e(first) {
+    margin-bottom: 50px;
+  }
+}
+
+.advantages-items-box {
+  @include display(flex);
+  @include flex-direction(column);
+
+
+  @include e(item) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include align-items(center);
+
+    & div {
+      @include display(flex);
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include align-items(center);
+      width: 135px;
+      height: 135px;
+      background-color: $black;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+
+    & p {
+      font-size: $baseFontSize;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $black;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}
