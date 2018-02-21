@@ -1,0 +1,28 @@
+.advantages {
+}
+.advantages-box {
+
+  @include e(title) {
+  }
+
+  @include e(left) {
+
+    & p {
+      padding-right: 215px;
+
+      &:last-child {
+      }
+    }
+  }
+
+  @include e(right) {
+    & p {
+      padding-left: 215px;
+
+      &:last-child {
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,30 @@
+.header {
+}
+
+.header-box {
+
+  @include e(logo) {
+  }
+
+  @include e(slogan) {
+  }
+
+  @include e(title) {
+    font-size: rem(60px);
+
+    & span {
+    }
+  }
+
+  @include e(text) {
+
+    & span {
+    }
+  }
+
+  @include e(button) {
+
+    &:hover {
+    }
+  }
+}

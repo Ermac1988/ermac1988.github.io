@@ -1,0 +1,113 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.form-box{
+  @include display(flex);
+  @include flex-direction(row);
+  @include align-items(center);
+  background-color:$blueBackground;
+  color: $white;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  @include e(img) {
+    margin-right: 5%;
+  }
+
+  @include e(text) {
+    margin-right: 10%;
+
+    & h4 {
+      margin: 0;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  @include e(form) {
+    position: relative;
+
+    & .form-group {
+      position: relative;
+
+      & input {
+        height: 38px;
+        border: none;
+        width: 100%;
+        border-bottom: 2px solid #73adff;
+        color: #73adff;
+        background: none;
+
+        &:focus {
+          border-bottom: 2px solid $white;
+          outline: 0;
+        }
+
+        &::-webkit-input-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s ease;
+          color: #73adff;
+        }
+        &::-moz-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s ease;
+          color: #73adff;
+        }
+        &:-moz-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s ease;
+          color: #73adff;
+        }
+        &:-ms-input-placeholder {
+          opacity: 1;
+          transition: opacity 0.5s ease;
+          color: #73adff;
+        }
+
+        &:focus::-webkit-input-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+        &:focus::-moz-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+        &:focus:-moz-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+        &:focus:-ms-input-placeholder {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+        }
+      }
+    }
+
+    & .btn {
+      position: absolute;
+      top: 50%;
+      left: 120%;
+      transform: translateY(-50%);
+      background-color: $redBackground;
+      border: 1px solid $redBackground;
+      color: $white;
+      box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      -ms-box-sizing: content-box;
+      font-size: $baseFontSize;
+      font-family: $openSans;
+      font-weight: 700;
+      border-radius: 25px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $white;
+        color: $redBackground;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.graph {
+}
+.graph-box {
+
+  @include e(img) {
+    padding: 0 50px 50px 50px;
+  }
+}
+.graph-counters-box {
+
+  @include e(item) {
+
+    & span {
+
+      & b {
+      }
+    }
+
+    & p {
+    }
+  }
+}

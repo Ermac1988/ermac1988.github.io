@@ -1,0 +1,48 @@
+body {
+  background-color: $white;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1080px;
+}
+
+.letter {
+  background-image: url("../img/letter.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 540px;
+  height: 680px;
+  position: relative;
+  top: 50px;
+  left: 55%;
+  z-index: 1;
+}
+
+.letter-box {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  @include e(logo) {
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  @include e(title) {
+    font-size: rem(30px);
+    font-family: $alegreya;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 40px;
+  }
+
+  @include e(text) {
+    font-size: rem($baseFontSize);
+    font-family: $alegreya;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $black;
+  }
+}

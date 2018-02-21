@@ -1,0 +1,61 @@
+.footer {
+  background-color: $backgroundBlack;
+  color: $footerText;
+}
+.footer-box {
+  font-size: rem(8px);
+  padding-top: 50px;
+  padding-bottom: 55px;
+
+  @include e(logo) {
+    margin-right: 30px;
+  }
+
+  @include e(regulators) {
+    margin-right: 30px;
+  }
+
+  @include e(copyright) {
+    margin-right: 30px;
+  }
+
+  @include e(support) {
+  }
+
+}
+.copyright-box__link {
+  padding-left: 15px;
+  list-style: none;
+
+  & .copyright-box__link_left {
+    margin-right: 40px;
+
+    & a {
+    }
+  }
+
+  & .copyright-box__link_right {
+
+    & a {
+    }
+  }
+}
+
+#scrollTop {
+  font-size: rem(40px);
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: $buttonFrom;
+  color: $white;
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $buttonTo;
+  }
+}

@@ -1,0 +1,58 @@
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.message-box {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  min-width: 530px;
+  min-height: 250px;
+  border-bottom: 5px solid $orangeText;
+  position: relative;
+  background-color: $white;
+  border-radius: 3px;
+  box-sizing: content-box;
+
+  @include e(img) {
+    position: absolute;
+    top: -35%;
+  }
+
+  @include e(text) {
+
+    & p {
+      font-size: rem(24px);
+      font-family: $openSans;
+      font-weight: 700;
+      color: $orangeText;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    & span:nth-of-type(1) {
+      display: block;
+      font-size: rem(18px);
+      font-family: $openSans;
+      font-weight: 400;
+      color: $black;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    & span:nth-of-type(2) {
+      display: block;
+      font-size: $baseFontSize;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $grayText;
+      text-align: center;
+    }
+  }
+
+
+}
