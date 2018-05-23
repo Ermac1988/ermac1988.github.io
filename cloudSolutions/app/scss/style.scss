@@ -1,0 +1,498 @@
+/* Fonts */
+$lato: 'Lato', sans-serif;
+
+/* Font size */
+$baseFontSize: 18px;
+
+/* Colors */
+$orangeButton: #ff8800;
+$blueButton: #0073ae;
+$darkText: #585858;
+$lightgrayBorder: #e4e4e4;
+$black: #000000;
+$white: #ffffff;
+$graySliderDivider: #e6e6e6;
+$graySliderBorder: #ebebeb;
+$grayImgBackground: #f7f7f7;
+
+@function rem($target) {
+  @return ($target / $baseFontSize) * 1rem;
+}
+
+@function em($target, $current:$baseFontSize) {
+  @return ($target / $current) * 1em;
+}
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+/* General */
+body {
+  font-size: $baseFontSize;
+  font-family: $lato;
+  color: $darkText;
+  background-color: $white;
+  margin: 0;
+}
+
+@keyframes blik {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.hidden{
+  opacity:0;
+}
+.visible{
+  opacity:1;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.slick-dots {
+  bottom: -35px;
+}
+.slick-dots li {
+  width: 13px;
+  height: 13px;
+}
+.slick-dots li button {
+  width: 13px;
+  height: 13px;
+}
+.slick-dots li.slick-active button:before {
+  border: 2px solid $darkText;
+  background-color: $white;
+  color: $white;
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+}
+.slick-dots li button:before {
+  background-color: $graySliderDivider;
+  color: $graySliderDivider;
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 13px;
+  height: 13px;
+  line-height: 13px;
+}
+/* Header */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 290px;
+  }
+
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    background-image: url("../img/header-bg.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+    & .header-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      @include e(title) {
+        font-size: 36px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        line-height: 38px;
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+      @include e(buttons) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @include m(orange) {
+          font-size: 18px;
+          font-family: $lato;
+          font-weight: 300;
+          color: $white;
+          text-align: center;
+          display: block;
+          position: relative;
+          max-width: 135px;
+          max-height: 50px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 20px;
+          padding-right: 20px;
+          text-decoration: none;
+          border-radius: 5px;
+          background-color: $orangeButton;
+          overflow: hidden;
+          margin-right: 25px;
+          transition: all 0.6s;
+
+          &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+          }
+
+          &:hover:before {
+            left: 0;
+            animation: blik 1.5s forwards;
+            transition: all 0.6s;
+          }
+        }
+
+        @include m(blue) {
+          display: block;
+          font-size: 18px;
+          font-family: $lato;
+          font-weight: 300;
+          color: $white;
+          text-align: center;
+          position: relative;
+          max-width: 135px;
+          max-height: 50px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 20px;
+          padding-right: 20px;
+          text-decoration: none;
+          border-radius: 5px;
+          background-color: $blueButton;
+          overflow: hidden;
+          transition: all 0.6s;
+
+          &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+          }
+
+          &:hover:before {
+            left: 0;
+            animation: blik 1.5s forwards;
+            transition: all 0.6s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .container {
+    width: 980px;
+  }
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    background-image: url("../img/header-bg.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    & .header-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 655px;
+      padding-left: 50px;
+      padding-right: 50px;
+      @include e(title) {
+        font-size: 45px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      @include e(buttons) {
+        @include m(orange) {
+          font-size: 20px;
+          font-family: $lato;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+          display: block;
+          position: relative;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          padding-left: 75px;
+          padding-right: 75px;
+          text-decoration: none;
+          border-radius: 5px;
+          background-color: $orangeButton;
+          overflow: hidden;
+          margin-right: 0;
+          transition: all 0.6s;
+          &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+          }
+          &:hover:before {
+            left: 0;
+            animation: blik 1.5s forwards;
+            transition: all 0.6s;
+          }
+        }
+        @include m(blue) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/* Main */
+@media only screen and (max-width: 768px) {
+  #slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 35px;
+    padding-bottom: 30px;
+
+    & .slider-box {
+      flex-basis: 100%;
+      border: 1px solid $graySliderBorder;
+      border-radius: 5px;
+      @include e(img) {
+        background-color: $grayImgBackground;
+      }
+      @include e(tabs) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-top: 20px;
+        background-color: $white;
+
+        &:after {
+          content: '';
+          position: absolute;
+          background-color: $graySliderDivider;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 100%;
+        }
+      }
+      @include e(tab-link) {
+        flex-basis: 50%;
+        font-size: $baseFontSize;
+        font-family: $lato;
+        font-weight: 300;
+        color: $blueButton;
+        text-align: center;
+        cursor: pointer;
+        @include m(current) {
+          color: $darkText;
+          cursor: auto;
+        }
+      }
+      @include e(tab-content) {
+        font-size: $baseFontSize;
+        font-family: $lato;
+        font-weight: 300;
+        color: $darkText;
+        display: none;
+        padding: 15px;
+        background-color: $white;
+        @include m(current) {
+          display: inherit;
+        }
+      }
+    }
+  }
+  #content {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  #slider {
+    display: none;
+  }
+  #content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    padding-top: 105px;
+    & .content-box {
+      @include e(titles) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $lightgrayBorder;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 15px;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          background-color: $graySliderDivider;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 63px;
+        }
+        & h2 {
+          font-size: 34px;
+          font-family: $lato;
+          font-weight: 300;
+          color: $blueButton;
+          line-height: 42px;
+          text-align: center;
+          margin-bottom: 0;
+          margin-top: 0;
+          flex-basis: 50%;
+        }
+      }
+      & .phone-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 60px;
+        padding-right: 60px;
+        border-bottom: 1px solid $lightgrayBorder;
+        @include e(phone) {
+          margin-bottom: 50px;
+        }
+        @include e(item) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: stretch;
+          position: relative;
+          @include m(left) {
+            font-size: $baseFontSize;
+            font-family: $lato;
+            font-weight: 300;
+            color: $darkText;
+            line-height: 23px;
+            text-align: center;
+            margin-bottom: 0;
+            flex-basis: 33%;
+          }
+          @include m(center) {
+            align-self: center;
+          }
+          @include m(right) {
+            font-size: $baseFontSize;
+            font-family: $lato;
+            font-weight: 300;
+            color: $darkText;
+            line-height: 23px;
+            text-align: center;
+            margin-bottom: 0;
+            flex-basis: 33%;
+          }
+        }
+      }
+      & .laptop-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        padding-top: 60px;
+        padding-bottom: 135px;
+        padding-left: 60px;
+        padding-right: 60px;
+        @include e(laptop) {
+          margin-bottom: 50px;
+        }
+        @include e(item) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: stretch;
+          position: relative;
+          @include m(left) {
+            font-size: $baseFontSize;
+            font-family: $lato;
+            font-weight: 300;
+            color: $darkText;
+            line-height: 23px;
+            text-align: center;
+            margin-bottom: 0;
+            flex-basis: 33%;
+          }
+          @include m(center) {
+            align-self: center;
+          }
+          @include m(right) {
+            font-size: $baseFontSize;
+            font-family: $lato;
+            font-weight: 300;
+            color: $darkText;
+            line-height: 23px;
+            text-align: center;
+            margin-bottom: 0;
+            flex-basis: 33%;
+          }
+        }
+      }
+    }
+  }
+}
