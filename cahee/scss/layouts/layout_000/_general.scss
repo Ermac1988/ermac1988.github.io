@@ -1,0 +1,26 @@
+html {
+  font-size: $baseFontSize;
+}
+
+body {
+  font-size: rem(17px);
+  font-family: $raleway;
+  color: $black;
+}
+
+.container {
+  width: $width;
+  margin: auto;
+  border: 1px dashed black;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.img-fluid {
+  width: 100%;
+  max-width: 100%;
+}

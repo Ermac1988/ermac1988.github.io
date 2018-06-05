@@ -1,0 +1,11 @@
+.blockquote-box {
+  margin-bottom: 65px;
+
+  @include e(text) {
+    max-width: 60%;
+
+    &:before {
+
+    }
+  }
+}

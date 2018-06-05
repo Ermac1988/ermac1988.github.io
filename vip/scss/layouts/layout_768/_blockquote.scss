@@ -1,0 +1,10 @@
+.blockquote-box {
+
+  @include e(text) {
+    max-width: 80%;
+
+    &:before {
+
+    }
+  }
+}

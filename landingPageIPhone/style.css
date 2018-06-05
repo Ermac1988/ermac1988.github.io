@@ -1,0 +1,122 @@
+body {
+	color: #404040;
+	font-family: 'Open Sans', sans-serif;
+	background: #f9f9f9;
+}
+
+header {
+	background:url(images/header-bg.jpg) center center no-repeat;
+	color: #fff;
+	text-align: center; 
+	background-size:cover;
+	padding: 135px 20px 90px 20px;
+}
+
+header h1 {
+	font-size: 3.75em;
+	font-family: 'Raleway', sans-serif;
+	margin-bottom: 40px;
+}
+
+header h3 {
+	font-size: 1.125em;
+	margin-bottom: 65px;
+	font-style: italic;
+}
+
+header p {
+	font-size: 0.75em;
+}
+
+.subscribe {
+	background: rgba(0, 0, 0, 0.65);
+	display: table;
+	padding: 20px;
+	margin: 0 auto 10px auto;
+	border-radius: 5px;
+}
+
+.subscribe input {
+	float: left;
+}
+
+.subscribe input[type="text"], input[type="email"] {
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	margin-right: 10px;
+	padding: 15px 20px 20px 20px;
+	width: 320px;
+	box-sizing: border-box;
+}
+
+.subscribe input[type="submit"] {
+	background: #ae2c52;
+	font-style: bold;
+	font-size: 1.25em;
+	border: none;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	padding: 15px 45px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+article {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 50px 20px;
+}
+
+article h1 {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+article p {
+	margin-bottom: 25px;
+	padding-top: 5px;
+}
+
+.imgLeft {
+	float: left;
+	margin: 0 30px 35px 0;
+}
+
+@media screen and (max-width:950px) {
+	.subscribe input[type="text"], input[type="email"] {
+		width: 260px;
+	}
+}
+
+@media screen and (max-width:830px) {
+	.subscribe input[type="text"], input[type="email"] {
+		width: 320px;
+		display: block;
+		float: none;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}	
+	
+	header {
+		padding: 30px 20px;
+	}
+	
+	header h1 {
+	font-size: 2.75em;
+	margin-bottom: 20px;
+	}
+
+	header h3 {
+	font-size: 1.125em;
+	margin-bottom: 65px;
+	font-style: italic;
+	}
+}
+
+@media screen and (max-width:950px) {
+	.subscribe input[type="text"], input[type="email"], input[type="submit"] {
+		width: 240px;
+	}
+}

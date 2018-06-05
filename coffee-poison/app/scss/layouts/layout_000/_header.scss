@@ -1,0 +1,84 @@
+#header {
+  background-image: url("../img/header-bg.jpg");
+  background-color: $black;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  z-index: -9999;
+  &:before {
+    content:'';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  & .header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 50vh;
+    padding-top: 55px;
+    position: relative;
+    z-index: 9999;
+    @include e(content) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    @include e(logo) {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: center;
+      & img {
+        margin-bottom: 15px;
+      }
+      & span {
+        font-size: 24px;
+        font-family: $lato;
+        font-weight: 400;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    @include e(contacts) {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: stretch;
+      & span {
+        font-size: $baseFontSize;
+        font-family: $lato;
+        font-weight: 400;
+        color: $white;
+        text-align: right;
+      }
+      & a {
+        font-size: $baseFontSize;
+        font-family: $lato;
+        font-weight: 400;
+        color: $white;
+        text-align: right;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    @include e(title) {
+      align-self: center;
+      font-size: 72px;
+      font-family: $lato;
+      font-weight: 700;
+      color: $white;
+      text-align: center;
+    }
+  }
+}

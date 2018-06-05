@@ -1,0 +1,29 @@
+.blockquote-box {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(center);
+  @include align-items(center);
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  @include e(text) {
+    font-size: 20px;
+    font-family: $openSans;
+    font-weight: 400;
+    color: $black;
+    margin-bottom: 0;
+    max-width: 100%;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 58px;
+      width: 70px;
+      background: url("../img/quote.png") 50% 50% no-repeat;
+      color: $black;
+      float: left;
+      margin-right: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}

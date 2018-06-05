@@ -1,0 +1,65 @@
+.about-box {
+  @include flex-wrap(wrap);
+}
+.experts-box {
+  @include flex-basis(30%);
+  @include order(1);
+  margin-right: 0;
+
+
+  @include e(title) {
+  }
+  @include e(video) {
+
+    &:nth-of-type(2) {
+    }
+  }
+}
+.banner-box {
+  @include flex-basis(69%);
+  @include order(0);
+  margin-right: 10px;
+
+  @include e(card) {
+
+    & p {
+    }
+  }
+
+  @include e(text) {
+
+  }
+
+  @include e(button) {
+
+    &:hover {
+    }
+  }
+}
+.testimonials-box {
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include flex-basis(100%);
+  @include order(2);
+
+  @include e(title) {
+    @include flex-basis(100%);
+  }
+  @include e(video) {
+    @include flex-basis(49%);
+    margin-right: 10px;
+    margin-bottom: 0;
+
+    & a {
+    }
+
+    & a>img {
+    }
+
+    &:nth-of-type(2) {
+      margin-right: 0;
+    }
+  }
+}
+

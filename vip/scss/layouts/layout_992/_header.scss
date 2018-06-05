@@ -1,0 +1,58 @@
+.header-box {
+
+  @include e(logo) {
+    @include flex-direction(row);
+    padding: 40px 0;
+
+    & a {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
+    & h1 {
+      font-size: 50px;
+
+      &:after {
+        top: 10px;
+      }
+    }
+  }
+
+  & .menu-box {
+    @include flex-direction(row);
+    padding: 15px 0;
+
+    @include e(email) {
+      margin-right: 55px;
+
+      & i {
+      }
+
+      & a {
+      }
+    }
+
+    @include e(phone) {
+      margin-right: 55px;
+
+      & i {
+      }
+
+      & a {
+      }
+
+    }
+
+    @include e(social) {
+
+      & a {
+
+        &:hover {
+        }
+
+        &:nth-last-child(1) {
+        }
+      }
+    }
+  }
+}

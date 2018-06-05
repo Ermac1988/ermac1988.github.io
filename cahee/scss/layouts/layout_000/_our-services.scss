@@ -1,0 +1,59 @@
+.services-box {
+  background-color: $blue;
+
+  & .container {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+    padding-top: 180px;
+    padding-bottom: 150px;
+  }
+}
+
+.services-left-box {
+  padding-left: 100px;
+
+  @include e(item) {
+    @include display(flex);
+    @include justify-content(space-between);
+    width: 400px;
+    padding: 40px 28px 40px 70px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.4);
+    background-color: $white;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: darken($white, 10%);
+    }
+
+    &:nth-child(3) {
+      padding-left: 30px;
+    }
+
+    & .services-title {
+      font-size: rem(20px);
+      font-weight: 700;
+    }
+
+    & .services-icon {
+      font-size: rem(30px);
+      align-self: center;
+    }
+  }
+
+}
+
+.services-right-box {
+  padding-left: 40px;
+
+  @include e(title) {
+    font-size: rem(90px);
+    font-weight: bold;
+    color: $white;
+  }
+
+}

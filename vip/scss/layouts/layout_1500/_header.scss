@@ -1,0 +1,46 @@
+.header-box {
+
+  @include e(logo) {
+
+    & a {
+    }
+
+    & h1 {
+      font-size: 82px;
+    }
+  }
+
+  & .menu-box {
+
+    @include e(email) {
+
+      & i {
+      }
+
+      & a {
+      }
+    }
+
+    @include e(phone) {
+
+      & i {
+      }
+
+      & a {
+      }
+
+    }
+
+    @include e(social) {
+
+      & a {
+
+        &:hover {
+        }
+
+        &:nth-last-child(1) {
+        }
+      }
+    }
+  }
+}

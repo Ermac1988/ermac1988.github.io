@@ -1,0 +1,48 @@
+.about-box {
+}
+.experts-box {
+  @include flex-basis(49%);
+  margin-right: 10px;
+
+  @include e(title) {
+  }
+  @include e(video) {
+
+    &:nth-of-type(2) {
+    }
+  }
+}
+.banner-box {
+  padding: 30px 20px;
+
+  @include e(card) {
+
+    & div {
+      display: block;
+    }
+
+    & p {
+    }
+  }
+
+  @include e(text) {
+
+  }
+
+  @include e(button) {
+
+    &:hover {
+    }
+  }
+}
+.testimonials-box {
+  @include flex-basis(49%);
+
+  @include e(title) {
+  }
+  @include e(video) {
+
+    &:nth-of-type(2) {
+    }
+  }
+}

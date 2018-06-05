@@ -1,0 +1,124 @@
+.header {
+  background-color: $white;
+  margin-bottom: 10px;
+}
+
+.header-box {
+
+  @include e(logo) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    padding: 10px 0;
+    background-color: $grayHeaderBackground;
+
+    & a {
+      margin-bottom: 10px;
+    }
+
+    & h1 {
+      font-size: 18px;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $darkgrayText;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      margin-top: 0;
+      text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+      position: relative;
+
+      &.blink_on:after {
+        transition: 1.5s linear;
+        background-position: 130% 0;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(to left, rgba(255,255,255,.0), rgba(255,255,255, 0.5), rgba(255,255,255,.0)) no-repeat -2em 0%;
+        background-size: 2em 100%;
+        -moz-transform: skewX(-50deg);
+        -o-transform: skewX(-50deg);
+        -webkit-transform: skewX(-50deg);
+        transform: skewX(-50deg);
+      }
+    }
+  }
+
+  & .menu-box {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include  align-items(center);
+    background-color: $lightgrayHeaderBackground;
+    padding: 5px 0;
+
+    @include e(email) {
+      @include display(flex);
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      @include  align-items(center);
+
+      & i {
+        font-size: 16px;
+        color: $blueText;
+        margin-right: 10px;
+      }
+
+      & a {
+        font-size: 16px;
+        font-family: $openSans;
+        font-weight: 400;
+        color: $black;
+        text-decoration: none;
+      }
+    }
+
+    @include e(phone) {
+      @include display(flex);
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      @include  align-items(center);
+
+      & i {
+        font-size: 16px;
+        color: $blueText;
+        margin-right: 10px;
+      }
+
+      & a {
+        font-size: 16px;
+        font-family: $openSans;
+        font-weight: 400;
+        color: $black;
+        text-decoration: none;
+      }
+
+    }
+
+    @include e(social) {
+
+      & a {
+        font-size: 36px;
+        color: $grayHeaderSocial;
+        margin-right: 5px;
+        display: inline-block;
+
+        &:hover {
+          color: $blueText;
+          -webkit-transition: 0.5s ease-in-out;
+          transition: 0.5s ease-in-out;
+        }
+
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

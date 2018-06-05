@@ -1,0 +1,48 @@
+.capture-box {
+  @include flex-direction(row);
+}
+
+.description-box {
+  @include flex-basis(49%);
+  @include flex-grow(1);
+  margin-right: 10px;
+
+  @include e(title) {
+  }
+
+  @include e(text) {
+
+    &:nth-of-type(3) {
+    }
+  }
+}
+
+.form-box {
+  @include flex-basis(49%);
+  @include flex-grow(1);
+  padding: 60px 101px;
+
+  @include e(title) {
+  }
+
+  @include e(form) {
+
+    & .form-group {
+
+      &:nth-of-type(2n) {
+      }
+
+      & label {
+      }
+
+      & input {
+      }
+    }
+
+    & button {
+
+      &:hover {
+      }
+    }
+  }
+}

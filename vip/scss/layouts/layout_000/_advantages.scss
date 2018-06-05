@@ -1,0 +1,73 @@
+.advantages-box {
+  background-color: $white;
+}
+.advantages-box {
+
+  @include e(title) {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+  }
+}
+.advantage-box {
+  @include display(flex);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(flex-start);
+  @include align-items(stretch);
+  @include align-content(stretch);
+
+  @include e(item) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    @include align-items(center);
+    @include flex-basis(100%);
+    @include flex-grow(1);
+    @include flex-shrink(1);
+    background: url("../img/banner.jpg") 50% 50% no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    &:hover p {
+      color: $goldAdvantagesText;
+      -webkit-transition: all 0.6s;
+      -moz-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      transition: all 0.6s;
+    }
+
+    &:hover svg {
+      transform: scale(1.2);
+      -webkit-transition: all 0.6s;
+      -moz-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      transition: all 0.6s;
+    }
+
+    &:hover path, &:hover circle {
+      fill: #f9c300;
+      animation: fadeIn 1.5s infinite linear;
+    }
+
+    & svg {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 25px;
+    }
+
+    & p {
+      font-size: 30px;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $white;
+      text-align: center;
+      -webkit-transition: all 0.6s;
+      -moz-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      transition: all 0.6s;
+    }
+  }
+}
