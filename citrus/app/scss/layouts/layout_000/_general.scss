@@ -1,0 +1,24 @@
+body {
+  font-size: $baseFontSize;
+  font-family: $arial;
+  font-weight: 400;
+  color: $black;
+  line-height: 1;
+  background-color: $white;
+  scrollbar-face-color: $white;
+  scrollbar-track-color: $black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  & .product-card {
+    &:nth-of-type(1) {
+      margin-right: 10px;
+    }
+  }
+}
