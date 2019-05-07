@@ -5,35 +5,17 @@
     @include e(item) {
       margin-right: 30px;
       margin-bottom: 0;
-      &:hover {
-      }
-      &:before {
-      }
-      &:after {
-      }
-      & i {
-      }
       &:nth-last-of-type(1) {
         margin-right: 0;
       }
       @include m(done) {
-        & i {
-        }
       }
       @include m(active) {
-        & i {
-        }
-        &:before {
-        }
       }
     }
   }
   @include e(header) {
     font-size: 28px;
-    & button {
-      & i {
-      }
-    }
   }
   @include e(row) {
     flex-direction: row;
