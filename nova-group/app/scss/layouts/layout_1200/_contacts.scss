@@ -1,0 +1,54 @@
+#contacts {
+  height: calc(100vh - 85px);
+  & .contacts-box {
+    @include e(header) {
+    }
+    @include e(contact) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      width: 100%;
+      @include m(left) {
+        width: 50%;
+        padding-right: 15px;
+        margin-bottom: 0;
+        & img {
+        }
+        & .address-box {
+          & span {
+            &:nth-of-type(1) {
+            }
+          }
+        }
+        & .email-box {
+          & a {
+          }
+        }
+        & .phones-box {
+          & a {
+            &:hover {
+
+            }
+            &:nth-of-type(1) {
+            }
+          }
+        }
+      }
+      @include m(right) {
+        width: 50%;
+        padding-left: 15px;
+        & form {
+          min-width: 400px;
+          & input {
+          }
+          & textarea {
+          }
+          & button {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+}

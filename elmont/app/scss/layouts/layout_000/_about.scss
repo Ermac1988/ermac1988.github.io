@@ -1,0 +1,37 @@
+#about-page {
+  background-color: $white;
+  margin-bottom: 85px;
+  & .about-page-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      font-size: 12px;
+      font-family: $openSans;
+      font-weight: 400;
+      text-align: left;
+      color: $mainTextColor;
+      text-transform: uppercase;
+      border-top: 1px solid #999;
+      padding-top: 15px;
+      margin-bottom: 35px;
+    }
+    @include e(img) {
+      margin-bottom: 35px;
+    }
+    @include e(text) {
+      & p {
+        font-size: 12px;
+        font-family: $openSans;
+        font-weight: 400;
+        text-align: left;
+        color: $mainTextColor;
+        margin-bottom: 10px;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

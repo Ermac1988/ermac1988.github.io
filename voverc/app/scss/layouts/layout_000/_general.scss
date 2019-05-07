@@ -1,0 +1,101 @@
+body {
+  font-size: $baseFontSize;
+  font-family: $openSans;
+  color: $black;
+  background-color: $white;
+  scrollbar-face-color: $footerBackground;
+  scrollbar-track-color: $textGray;
+}
+
+.visibility-hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.hidden{
+  opacity:0;
+}
+
+.visible{
+  opacity:1;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $footerBackground;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $textGray;
+}
+
+::-webkit-input-placeholder {
+  color: $black;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+:-ms-input-placeholder {
+  color: $black;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+::-moz-placeholder {
+  color: $black;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+:-moz-placeholder {
+  color: $black;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+:focus::-moz-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+:focus:-moz-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.modal-body {
+  min-height: 150px;
+  & p {
+    color: $white;
+  }
+}

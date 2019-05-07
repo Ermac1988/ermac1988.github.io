@@ -1,0 +1,197 @@
+header {
+  padding-top: 45px;
+  padding-bottom: 120px;
+  & .header-box {
+    @include e(navigation) {
+      width: 100%;
+      margin-bottom: 110px;
+      & .logo-box {
+        order: 1;
+        & img {
+          width: auto;
+          height: auto;
+        }
+      }
+      & .shedule-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+        font-size: 17px;
+        font-family: $openSans;
+        font-weight: 400;
+        color: $black;
+        text-align: center;
+        & b {
+          font-size: 24px;
+          font-family: $openSans;
+          font-weight: 700;
+          color: $mainYellow;
+          text-align: center;
+          margin-left: 10px;
+        }
+      }
+      & .nav-box {
+        order: 3;
+        @include e(icon) {
+          display: none;
+          & span {
+            &:nth-last-child(1) {
+            }
+          }
+        }
+        @include e(items) {
+          display: flex;
+          & li {
+            margin-right: 30px;
+            &:nth-last-child(1) {
+              margin-right: 0;
+            }
+            & a {
+              border-bottom: none;
+              transition-property: all;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-out;
+              &:hover {
+                transition-property: all;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-in;
+                border-bottom: 1px solid $mainYellow;
+              }
+            }
+          }
+        }
+      }
+      & .mobile-callback-box {
+        display: none;
+      }
+      /*& .callback-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        order: 4;
+        font-size: 22px;
+        font-family: $openSans;
+        font-weight: 700;
+        color: $black;
+        text-align: center;
+        & a {
+          display: flex;
+          font-size: 17px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $black;
+          text-align: center;
+          text-decoration: none;
+          border-bottom: 2px dotted $black;
+          margin-left: 15px;
+        }
+      }*/
+      & .phones-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        order: 4;
+        & a {
+          &:nth-of-type(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-family: $openSans;
+            font-weight: 700;
+            color: $black;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            &:hover {
+              color: $mainYellow;
+              transition-property: color;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in;
+            }
+          }
+          &:nth-last-of-type(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-family: $openSans;
+            font-weight: 700;
+            color: $black;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            &:hover {
+              color: $mainYellow;
+              transition-property: color;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in;
+            }
+          }
+        }
+      }
+    }
+    & .mobile-shedule-box {
+      display: none;
+      & b {
+      }
+    }
+    @include e(content) {
+      flex-direction: row;
+      align-items: stretch;
+      & .img-box {
+        order: 2;
+        width: 50%;
+        margin-bottom: 0;
+        @include e(text) {
+          font-size: 30px;
+          top: -40px;
+          left: 35%;
+          & b:nth-child(1) {
+            font-size: 45px;
+          }
+          & b:nth-child(2) {
+            font-size: 40px;
+          }
+        }
+        @include e(img) {
+        }
+      }
+      & .text-box {
+        position: relative;
+        order: 1;
+        width: 50%;
+        &:after {
+          content: url("../img/arrow.png");
+          position: absolute;
+          bottom: 25px;
+          right: 55px;
+        }
+        @include e(header) {
+          font-size: 38px;
+          line-height: 42px;
+          margin-bottom: 25px;
+        }
+        @include e(subtitle) {
+          font-size: 25px;
+          margin-bottom: 55px;
+        }
+        @include e(button) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

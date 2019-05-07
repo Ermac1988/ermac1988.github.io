@@ -1,0 +1,187 @@
+#products-page {
+  background-color: $white;
+  margin-bottom: 85px;
+  & .products-page-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      font-size: 12px;
+      font-family: $openSans;
+      font-weight: 400;
+      text-align: left;
+      color: $mainTextColor;
+      text-transform: uppercase;
+      border-top: 1px solid #999;
+      padding-top: 15px;
+      margin-bottom: 35px;
+    }
+    @include e(text) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-bottom: 30px;
+      & h2 {
+        font-size: 30px;
+        font-family: $openSans;
+        font-weight: 900;
+        text-align: left;
+        color: $mainTextColor;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+      & p {
+        font-size: 12px;
+        font-family: $openSans;
+        font-weight: 400;
+        text-align: left;
+        color: $mainTextColor;
+        margin-bottom: 10px;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+      }
+      & ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-bottom: 20px;
+        & li {
+          list-style: circle;
+          margin-bottom: 15px;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+          & a {
+            font-size: 12px;
+            font-family: "Open Sans",sans-serif;
+            font-weight: 400;
+            text-align: left;
+            color: $blue;
+          }
+        }
+      }
+    }
+    @include e(works) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      & h2 {
+        font-size: 20px;
+        font-family: $openSans;
+        font-weight: 900;
+        text-align: left;
+        color: $mainTextColor;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+      & .row-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 35px;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+        & .item-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+          margin-bottom: 30px;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+          @include e(link) {
+            display: flex;
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            margin-bottom: 15px;
+            &:hover img {
+              opacity: 0.5;
+              transition-property: opacity;
+              transition-timing-function: ease-in;
+              transition-duration: 0.3s;
+            }
+            &:hover:after {
+              opacity: 1;
+              transition-property: opacity;
+              transition-timing-function: ease-in;
+              transition-duration: 0.3s;
+            }
+            &:after {
+              content: '\f002';
+              opacity: 0;
+              font-size: 40px;
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              color: $blue;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              transition-property: opacity;
+              transition-timing-function: ease-out;
+              transition-duration: 0.3s;
+            }
+            & img {
+              max-height: 200px;
+              opacity: 1;
+              transition-property: opacity;
+              transition-timing-function: ease-out;
+              transition-duration: 0.3s;
+            }
+          }
+          @include e(header) {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: left;
+            color: $mainTextColor;
+            margin-bottom: 5px;
+          }
+          @include e(text) {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: left;
+            color: $mainTextColor;
+          }
+        }
+      }
+      & > a {
+        align-self: center;
+        font-size: 12px;
+        font-family: $openSans;
+        font-weight: 400;
+        text-align: center;
+        color: $white;
+        text-decoration: none;
+        background-color: $blue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        border: 1px solid $blue;
+        border-radius: 5px;
+        transition-property: all;
+        transition-timing-function: ease-out;
+        transition-duration: 0.3s;
+        &:hover {
+          color: $blue;
+          background-color: $white;
+          transition-property: all;
+          transition-timing-function: ease-in;
+          transition-duration: 0.3s;
+        }
+      }
+    }
+  }
+}

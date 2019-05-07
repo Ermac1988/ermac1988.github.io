@@ -1,0 +1,68 @@
+#products-new-page {
+  & .products-new-page-box {
+    @include e(header) {
+    }
+    @include e(text) {
+      & h2 {
+      }
+      & p {
+      }
+      & ul {
+        & li {
+          & a {
+          }
+        }
+      }
+    }
+    @include e(catalogs) {
+      & .row-box {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        & .item-box {
+          margin-right: 15px;
+          margin-left: 15px;
+          margin-bottom: 0;
+          &:nth-of-type(1) {
+            margin-left: 0;
+          }
+          &:nth-last-child(1) {
+            margin-right: 0;
+          }
+          @include e(link) {
+          }
+          @include e(header) {
+          }
+          @include e(download) {
+          }
+        }
+      }
+    }
+    @include e(works) {
+      & h2 {
+      }
+      & .row-box {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        & .item-box {
+          margin-right: 15px;
+          margin-left: 15px;
+          margin-bottom: 0;
+          &:nth-of-type(1) {
+            margin-left: 0;
+          }
+          &:nth-last-child(1) {
+            margin-right: 0;
+          }
+          @include e(link) {
+          }
+          @include e(header) {
+          }
+          @include e(text) {
+          }
+        }
+      }
+    }
+  }
+}

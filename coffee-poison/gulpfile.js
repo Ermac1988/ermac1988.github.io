@@ -61,7 +61,7 @@ gulp.task('js:dist', function () {
 
 gulp.task('style:dist', function () {
     return gulp.src(path.app.style)
-        .pipe(sourcemaps.init()).pipe(sass().on('error', sass.logError)).pipe(sourcemaps.write()).pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false, grid: true})).pipe(gulp.dest(path.dist.css)).pipe(reload({stream: true}));
+        .pipe(sourcemaps.init()).pipe(sass().on('error', sass.logError)).pipe(sourcemaps.write()).pipe(autoprefixer({browsers: ['last 15 versions'], cascade: false, grid: true})).pipe(cleanCSS({debug: true}, (details) => { console.log(`${details.name}: ${details.stats.originalSize}`); console.log(`${details.name}: ${details.stats.minifiedSize}`); })).pipe(gulp.dest(path.dist.css)).pipe(reload({stream: true}));
 });
 
 gulp.task('image:dist', function () {

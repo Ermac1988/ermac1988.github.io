@@ -1,0 +1,180 @@
+#contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  background-image: url("../img/contact-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-bottom: 3px solid $yellow;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  & .contacts-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include e(header) {
+      font-size: 30px;
+      font-family: $openSans;
+      font-weight: 700;
+      color: $yellow;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    @include e(contact) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      @include m(left) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        & img {
+          margin-bottom: 20px;
+        }
+        & .address-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 20px;
+          & span {
+            font-size: 18px;
+            font-family: $openSans;
+            font-weight: 400;
+            color: $white;
+            &:nth-of-type(1) {
+            }
+          }
+        }
+        & .email-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 20px;
+          & a {
+            font-size: 18px;
+            font-family: $openSans;
+            font-weight: 700;
+            color: $yellow;
+            text-decoration: none;
+          }
+        }
+        & .phones-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          & a {
+            font-size: 18px;
+            font-family: $openSans;
+            font-weight: 700;
+            color: $yellow;
+            text-decoration: none;
+            &:hover {
+
+            }
+            &:nth-of-type(1) {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        & form {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+          min-width: 280px;
+          & input {
+            padding-top: 6px;
+            padding-right: 6px;
+            padding-left: 6px;
+            padding-bottom: 6px;
+            background-color: $yellow;
+            font-size: 14px;
+            font-family: $openSans;
+            font-weight: 400;
+            color: $headerBackground;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+          }
+          & textarea {
+            padding-top: 6px;
+            padding-right: 6px;
+            padding-left: 6px;
+            padding-bottom: 6px;
+            font-size: 14px;
+            font-family: $openSans;
+            font-weight: 400;
+            color: $headerBackground;
+            border-radius: 5px;
+            background-color: $yellow;
+            margin-bottom: 30px;
+            outline: none;
+            border: none;
+          }
+          & button {
+            align-self: center;
+            font-size: 18px;
+            font-family: $openSans;
+            font-weight: 400;
+            color: $headerBackground;
+            text-align: center;
+            background-color: $yellow;
+            max-width: 150px;
+            padding-top: 6px;
+            padding-right: 6px;
+            padding-left: 6px;
+            padding-bottom: 6px;
+            border-radius: 5px;
+            outline: none;
+            border: 2px solid $yellow;
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            &:hover {
+              background-color: $headerBackground;
+              color: $yellow;
+              transition-property: all;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in;
+            }
+          }
+        }
+        & .result-box {
+          display: none;
+          font-size: 18px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $yellow;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

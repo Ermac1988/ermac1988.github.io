@@ -1,0 +1,125 @@
+#contact-form {
+  background-color: $gray;
+  padding-top: 25px;
+  padding-bottom: 45px;
+  & .contact-form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      font-size: 33px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $mainTextColor;
+      text-align: center;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      & span {
+        color: $orange;
+      }
+    }
+    @include e(form) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-self: center;
+      position: relative;
+      width: 300px;
+      min-height: 273px;
+      border-radius: 15px;
+      border: 4px solid $orange;
+      padding-top: 30px;
+      padding-bottom: 45px;
+      padding-right: 50px;
+      padding-left: 50px;
+      &:before {
+      }
+      @include m(left) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+        & input {
+          border-bottom: 1px solid $mainTextColor;
+          outline: none;
+          font-size: 16px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          color: $mainTextColor;
+          text-align: center;
+          margin-bottom: 30px;
+          min-height: 25px;
+          width: 100%;
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+        & input {
+          border-bottom: 1px solid $mainTextColor;
+          outline: none;
+          font-size: 16px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          color: $mainTextColor;
+          text-align: center;
+          margin-bottom: 30px;
+          min-height: 25px;
+          width: 100%;
+          &:nth-last-of-type(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+      & button {
+        position: absolute;
+        bottom: -25px;
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 18px;
+        font-family: $cocosignum;
+        font-weight: 400;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 35px;
+        padding-right: 35px;
+        cursor: pointer;
+        background-color: $orange;
+        border: 1px solid transparent;
+        outline: none;
+        transition-property: all;
+        transition-timing-function: ease-out;
+        transition-duration: 0.3s;
+        border-radius: 10px;
+        &:hover {
+          color: $orange;
+          border: 1px solid $orange;
+          background-color: $white;
+          transition-property: all;
+          transition-timing-function: ease-in;
+          transition-duration: 0.3s;
+        }
+      }
+    }
+    & .result-box {
+      display: none;
+      align-self: center;
+      font-size: 18px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $orange;
+      text-align: center;
+    }
+  }
+}

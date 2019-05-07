@@ -1,0 +1,42 @@
+#contact-form {
+  & .contact-form-box {
+    @include e(header) {
+      & span {
+      }
+    }
+    @include e(form) {
+      flex-direction: row;
+      justify-content: stretch;
+      width: 500px;
+      min-height: 163px;
+      &:before {
+        content: url("../img/film.png");
+        position: absolute;
+        top: 0;
+        left: -40%;
+      }
+      @include m(left) {
+        width: 50%;
+        margin-right: 20px;
+        & input {
+          &:nth-last-of-type(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+      @include m(right) {
+        width: 50%;
+        & input {
+          &:nth-last-of-type(1) {
+          }
+        }
+      }
+      & button {
+        right: 40px;
+        transform: translateX(0);
+        &:hover {
+        }
+      }
+    }
+  }
+}

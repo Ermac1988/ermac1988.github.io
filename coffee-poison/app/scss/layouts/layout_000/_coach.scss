@@ -1,0 +1,41 @@
+#coach {
+  background-color: $white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  & .coach-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    & h2 {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+    @include e(img) {
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    @include e(content) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      & h3 {
+        font-size: 26px;
+        font-family: $lato;
+        font-weight: 700;
+        color: $orangeRatesPriceText;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      & p {
+        font-size: 18px;
+        font-family: $lato;
+        font-weight: 400;
+        color: $grayRatesText;
+        text-align: left;
+      }
+    }
+  }
+}

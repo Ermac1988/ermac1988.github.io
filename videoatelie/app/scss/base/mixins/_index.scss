@@ -1,0 +1,44 @@
+@font-face { font-family: 'CocosignumCorsivoItalico-Regular'; src: url('../fonts/CocosignumCorsivoItalico-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/CocosignumCorsivoItalico-Regular.woff') format('woff'), url('../fonts/CocosignumCorsivoItalico-Regular.ttf') format('truetype'), url('../fonts/CocosignumCorsivoItalico-Regular.svg#CocosignumCorsivoItalico-Regular') format('svg'); font-weight: normal; font-style: normal; }
+@if variable_exists(google-font) {
+  @import url($cocosignum-font);
+  @import url($felipa-font);
+}
+
+@function rem($target) {
+  @return ($target / $baseFontSize) * 1rem;
+}
+
+@function em($target, $current:$baseFontSize) {
+  @return ($target / $current) * 1em;
+}
+
+@mixin noselect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &_#{$modifier} {
+    @content;
+  }
+}
+
+@mixin media($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin font($f, $s, $w: '') {
+  font: #{$w} $s $f;
+}
+

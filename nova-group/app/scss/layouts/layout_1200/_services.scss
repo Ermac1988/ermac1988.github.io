@@ -1,0 +1,19 @@
+#services {
+  height: calc(100vh - 85px);
+  & .services-box {
+    flex-direction: row;
+    @include e(item) {
+      display: flex;
+      margin-bottom: 0;
+      margin-right: 30px;
+      &:nth-last-of-type(1) {
+        margin-right: 0;
+      }
+      & img {
+      }
+    }
+    @include e(mobile) {
+      display: none;
+    }
+  }
+}

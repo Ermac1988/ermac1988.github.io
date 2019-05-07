@@ -1,0 +1,31 @@
+#home-features {
+  background-color: $gray;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  & .home-features-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(item) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $mainTextColor;
+      text-align: center;
+      line-height: 20px;
+      margin-bottom: 20px;
+      & img {
+        height: 60px;
+        margin-bottom: 10px;
+      }
+      &:nth-last-of-type(1) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

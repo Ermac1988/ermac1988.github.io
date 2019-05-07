@@ -1,0 +1,149 @@
+#video-header {
+  background-color: $black;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-top: 25px;
+  padding-bottom: 45px;
+  & .video-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(upper) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      & .menu-box {
+        display: none;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: stretch;
+        & ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: stretch;
+          align-items: stretch;
+          & li {
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            align-items: stretch;
+            margin-right: 20px;
+            &:nth-last-of-type(1) {
+              margin-right: 0;
+            }
+            & a {
+              font-size: 14px;
+              font-family: $cocosignum;
+              font-weight: 400;
+              color: $white;
+              text-transform: uppercase;
+              text-decoration: none;
+              outline: none;
+              transition-property: color;
+              transition-duration: 0.5s;
+              transition-timing-function: ease-out;
+              &:hover {
+                color: $orange;
+                transition-property: color;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-in;
+              }
+            }
+          }
+        }
+      }
+      & .phone-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        & a {
+          font-size: 14px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          color: $white;
+          text-decoration: none;
+          outline: none;
+          transition-property: color;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-out;
+          &:nth-of-type(1) {
+            margin-right: 15px;
+          }
+          &:hover {
+            color: $orange;
+            transition-property: color;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
+          }
+        }
+      }
+    }
+    @include e(lower) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      @include m(left) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        margin-bottom: 30px;
+        & a {
+          display: flex;
+          & img {
+            height: 100%;
+          }
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        & h1 {
+          font-size: 40px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        & a {
+          align-self: center;
+          font-size: 33px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+          text-decoration: none;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 35px;
+          padding-right: 35px;
+          background-color: $pink;
+          border: 1px solid transparent;
+          outline: none;
+          transition-property: all;
+          transition-timing-function: ease-out;
+          transition-duration: 0.3s;
+          border-radius: 10px;
+          &:hover {
+            color: $pink;
+            border: 1px solid $pink;
+            background-color: $white;
+            transition-property: all;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

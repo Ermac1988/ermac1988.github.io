@@ -1,0 +1,115 @@
+#footer {
+  & .footer-box {
+    @include e(main) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      @include m(left) {
+        width: 50%;
+        margin-bottom: 0;
+        & .footer-logo-box {
+          margin-right: 50px;
+        }
+        & .footer-menu-box {
+          display: flex;
+          & ul {
+            & li {
+              &:nth-last-of-type(1) {
+              }
+              & a {
+                &:hover {
+                }
+              }
+            }
+          }
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 50%;
+        & .footer-contacts-box {
+          & a {
+            text-align: right;
+            &:nth-last-of-type(1) {
+            }
+            &:hover {
+            }
+          }
+        }
+        & .copyright-box {;
+        }
+      }
+    }
+    @include e(developed) {
+      & a {
+        &:hover {
+        }
+        &:hover .web-studio:after {
+        }
+        & .web-studio {
+          &:hover {
+          }
+          &:after {
+          }
+        }
+      }
+    }
+  }
+}
+.order-box {
+  @include e(header) {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      z-index: 100;
+      border-bottom: 70px solid $white;
+      transform: rotate(0.000001deg);
+      right: 50%;
+      border-right: 1000px solid transparent;
+      border-left: 1000px solid;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      z-index: 100;
+      border-bottom: 70px solid $white;
+      transform: rotate(0.000001deg);
+      left: 50%;
+      border-left: 1000px solid transparent;
+      border-right: 1000px solid;
+    }
+  }
+  @include e(form) {
+    flex-direction: row;
+    justify-content: stretch;
+    position: relative;
+    @include m(left) {
+      width: 50%;
+      margin-right: 20px;
+      & input {
+      }
+    }
+    @include m(right) {
+      & input {
+        &:nth-last-of-type(1) {
+        }
+      }
+    }
+    & button {
+      position: absolute;
+      bottom: -15%;
+      left: 50%;
+      transform: translateX(-50%);
+      &:hover {
+      }
+    }
+  }
+}

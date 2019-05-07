@@ -1,0 +1,42 @@
+#home-price {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 999;
+  max-height: 850px;
+  & .home-price-box {
+    position: relative;
+    top: -170px;
+    @include e(slider) {
+      padding-left: 105px;
+      padding-right: 105px;
+      & .slick-slide {
+      }
+      & .slick-center {
+      }
+      & .price-slider-wrapper {
+        @include e(header) {
+          & h3 {
+          }
+          & span {
+          }
+        }
+        @include e(body) {
+          & ul {
+            & li {
+              &:nth-of-type(2n) {
+              }
+            }
+          }
+
+        }
+        @include e(footer) {
+          & a {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+  }
+}

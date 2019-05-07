@@ -1,0 +1,49 @@
+#home-products {
+  background-color: $white;
+  margin-bottom: 85px;
+  & .home-products-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(product) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 100%;
+      margin-bottom: 35px;
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+      & h3 {
+        font-size: 14px;
+        font-family: $openSans;
+        font-weight: 400;
+        text-align: left;
+        color: $mainTextColor;
+        line-height: 0.9;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        &:after {
+          content: "";
+          display: block;
+          height: 1px;
+          width: 15px;
+          background: #ddd;
+          margin-top: 15px;
+        }
+      }
+      & p {
+        font-size: 12px;
+        font-family: $openSans;
+        font-weight: 400;
+        text-align: left;
+        color: $mainTextColor;
+        margin-bottom: 15px;
+      }
+      & img {
+      }
+    }
+  }
+}

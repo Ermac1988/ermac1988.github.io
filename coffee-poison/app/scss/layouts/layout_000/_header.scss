@@ -13,7 +13,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
   & .header-box {
     display: flex;
@@ -42,7 +42,7 @@
       }
       & span {
         display: none;
-        font-size: 24px;
+        font-size: 20px;
         font-family: $lato;
         font-weight: 400;
         color: $white;
@@ -69,8 +69,16 @@
         color: $white;
         text-align: right;
         text-decoration: none;
+        border: none;
+        outline: none;
+        transition-property: color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.3s;
         &:hover {
-          text-decoration: underline;
+          color: $lightorangeRatesButtonBackground;
+          transition-property: background-color;
+          transition-timing-function: ease-in;
+          transition-duration: 0.3s;
         }
       }
     }

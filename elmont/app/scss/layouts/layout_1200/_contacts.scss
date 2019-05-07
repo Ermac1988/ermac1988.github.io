@@ -1,0 +1,41 @@
+#contacts-page {
+  & .contacts-page-box {
+    @include e(header) {
+    }
+    @include e(contacts) {
+      flex-direction: row;
+      justify-content: space-between;
+      @include m(left) {
+        width: 50%;
+        margin-bottom: 0;
+        margin-right: 15px;
+        & p {
+        }
+      }
+      @include m(right) {
+        width: 50%;
+        margin-bottom: 0;
+        margin-left: 15px;
+      }
+    }
+    @include e(form) {
+      width: 50%;
+      align-self: flex-start;
+      & h2 {
+      }
+      & #contact-form {
+        & .form-group {
+          & label {
+          }
+          & input {
+          }
+          & textarea {
+          }
+        }
+        & button {
+        }
+      }
+    }
+  }
+
+}

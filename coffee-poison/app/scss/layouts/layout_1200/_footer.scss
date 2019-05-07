@@ -1,0 +1,36 @@
+#footer {
+  & .footer-box {
+    @include e(content) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      & img {
+        margin-bottom: 0;
+      }
+      & .social-box {
+        margin-bottom: 0;
+        @include e(title) {
+        }
+        @include e(links) {
+
+        }
+      }
+      & .contacts-box {
+        @include e(title) {
+        }
+        @include e(address) {
+        }
+        & a {
+        }
+      }
+    }
+    @include e(developed) {
+      & a {
+        flex-direction: row;
+        & .web-studio {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

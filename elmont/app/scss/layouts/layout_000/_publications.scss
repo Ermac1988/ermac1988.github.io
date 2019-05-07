@@ -1,0 +1,41 @@
+#publications-page {
+  background-color: $white;
+  margin-bottom: 85px;
+  & .publications-page-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      font-size: 12px;
+      font-family: $openSans;
+      font-weight: 400;
+      text-align: left;
+      color: $mainTextColor;
+      text-transform: uppercase;
+      border-top: 1px solid #999;
+      padding-top: 15px;
+      margin-bottom: 35px;
+    }
+    @include e(list) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      & li {
+        list-style: circle;
+        margin-bottom: 15px;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+        & a {
+          font-size: 12px;
+          font-family: $openSans;
+          font-weight: 400;
+          text-align: left;
+          color: $blue;
+        }
+      }
+    }
+  }
+}

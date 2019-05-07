@@ -1,0 +1,21 @@
+#home-slider {
+  .home-slider-box {
+    flex-direction: row;
+    justify-content: stretch;
+    @include e(left) {
+      width: 50%;
+      padding-right: 15px;
+      margin-bottom: 0;
+      & h1 {
+        font-size: 45px;
+      }
+      & p {
+      }
+    }
+    @include e(right) {
+      width: 50%;
+      padding-left: 15px;
+
+    }
+  }
+}

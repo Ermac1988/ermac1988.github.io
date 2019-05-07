@@ -1,0 +1,87 @@
+.header {
+  background-color: $white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include e(row) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include e(logo) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  @include e(contacts) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    & a {
+      &:nth-of-type(1) {
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: center;
+        font-size: 16px;
+        font-family: $openSans;
+        font-weight: 700;
+        color: $blue;
+        text-decoration: none;
+        transition-duration: 0.3s;
+        transition-property: color;
+        transition-timing-function: ease-out;
+        &:hover {
+          color: $textGray;
+          transition-duration: 0.3s;
+          transition-property: color;
+          transition-timing-function: ease-in;
+        }
+        &:after {
+          content: '';
+          display: inline-block;
+          width: 2px;
+          height: 28px;
+          background-color: #ededed;
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+      }
+      &:nth-of-type(2) {
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: center;
+        font-size: 16px;
+        font-family: $openSans;
+        font-weight: 700;
+        color: $textGray;
+        text-decoration: none;
+        transition-duration: 0.3s;
+        transition-property: color;
+        transition-timing-function: ease-out;
+        &:hover {
+          color: $blue;
+          transition-duration: 0.3s;
+          transition-property: color;
+          transition-timing-function: ease-in;
+        }
+        &:before {
+          content: '\f075';
+          font-size: 16px;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 400;
+          color: #cdab88;
+          margin-right: 10px
+        }
+      }
+    }
+  }
+}

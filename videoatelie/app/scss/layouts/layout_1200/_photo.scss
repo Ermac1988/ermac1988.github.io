@@ -1,0 +1,28 @@
+#photo {
+  & .photo-box {;
+    @include e(header) {
+      &:before {
+      }
+    }
+    @include e(subheader) {
+      font-size: 24px;
+    }
+    @include e(photos) {
+      & .photo-slider-wrapper {
+        & a {
+          &:before {
+          }
+          &:hover {
+          }
+          & img {
+            min-height: 265px;
+          }
+        }
+      }
+    }
+    @include e(button) {
+      &:hover {
+      }
+    }
+  }
+}

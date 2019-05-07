@@ -1,0 +1,96 @@
+#home-about {
+    background-color: $gray;
+    padding-top: 60px;
+    padding-bottom: 140px;
+    & .home-about-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        @include e(header) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            font-size: 33px;
+            font-family: $cocosignum;
+            font-weight: 400;
+            color: $black;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            &:before {
+                content: url("../img/about.png");
+            }
+        }
+        @include e(subheader) {
+            font-size: 24px;
+            font-family: $cocosignum;
+            font-weight: 400;
+            color: $orange;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        @include e(first-text) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-bottom: 45px;
+            & p {
+                &:nth-of-type(1) {
+                    font-size: 22px;
+                    font-family: $cocosignum;
+                    font-weight: 400;
+                    font-style: italic;
+                    color: $orange;
+                    text-align: center;
+                    width: 100%;
+                    margin-bottom: 25px;
+                }
+                &:nth-of-type(2) {
+                    font-size: 16px;
+                    font-family: $cocosignum;
+                    font-weight: 400;
+                    color: $mainTextColor;
+                    text-align: left;
+                    width: 100%;
+                }
+            }
+        }
+        @include e(img) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-bottom: 55px;
+            & img {
+                align-self: center;
+                width: 100%;
+            }
+        }
+        @include e(second-text) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
+            & p {
+                font-size: 16px;
+                font-family: $cocosignum;
+                font-weight: 400;
+                color: $mainTextColor;
+                text-align: left;
+                &:nth-of-type(1) {
+                    margin-bottom: 20px;
+                }
+                &:nth-of-type(2) {
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-align: right;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

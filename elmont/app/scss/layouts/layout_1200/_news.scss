@@ -1,0 +1,27 @@
+#news-page {
+  & .news-page-box {
+    @include e(header) {
+    }
+    & .news-item-box {
+      @include e(header) {
+      }
+      @include e(content) {
+        flex-direction: row;
+        justify-content: space-between;
+        @include m(left) {
+          margin-right: 15px;
+          margin-bottom: 0;
+          min-width: 200px;
+          & img {
+            align-self: flex-start;
+          }
+        }
+        @include m(right) {
+          margin-left: 15px;
+          & p {
+          }
+        }
+      }
+    }
+  }
+}

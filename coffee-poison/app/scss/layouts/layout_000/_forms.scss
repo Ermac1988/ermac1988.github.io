@@ -1,0 +1,99 @@
+#form-popup, #order-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background-color: $white;
+  width: auto;
+  max-width: 500px;
+  border-radius: 5px;
+  margin: 20px auto;
+  & h2 {
+    font-size: 30px;
+    font-family: $lato;
+    font-weight: 300;
+    color: $black;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-self: center;
+    width: 100%;
+    & input {
+      border: 1px solid $bordoRatesButtonBackground;
+      outline: none;
+      border-radius: 5px;
+      min-height: 40px;
+      font-size: 14px;
+      font-family: $lato;
+      font-weight: 400;
+      color: $bordoRatesButtonBackground;
+      text-align: center;
+      margin-bottom: 10px;
+      &:nth-last-of-type(1) {
+        margin-bottom: 30px;
+      }
+    }
+    & button {
+      align-self: center;
+      font-size: 14px;
+      font-family: $lato;
+      font-weight: 700;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: $bordoRatesButtonBackground;
+      border: none;
+      outline: none;
+      transition-property: background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.3s;
+      border-radius: 5px;
+      max-width: 200px;
+      &:hover {
+        background-color: $lightorangeRatesButtonBackground;
+        transition-property: background-color;
+        transition-timing-function: ease-in;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+}
+#fail, #success {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background-color: $white;
+  width: auto;
+  max-width: 500px;
+  border-radius: 5px;
+  margin: 20px auto;
+  & .message {
+    font-size: 12px;
+    font-family: $lato;
+    font-weight: 400;
+    color: $bordoRatesButtonBackground;
+    text-align: center;
+  }
+}

@@ -1,0 +1,176 @@
+#footer {
+  background-color: $bordoRatesButtonBackground;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  & .footer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(content) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 50px;
+      & img {
+        margin-bottom: 50px;
+      }
+      & .social-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 50px;
+        @include e(title) {
+          font-size: 36px;
+          font-family: $lato;
+          font-weight: 300;
+          color: $lightorangeRatesButtonBackground;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        @include e(links) {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          & li {
+            margin-right: 10px;
+            &:nth-last-of-type(1) {
+              margin-right: 0;
+            }
+            & a {
+              display: flex;
+              font-size: 36px;
+              font-family: $lato;
+              font-weight: 400;
+              color: $white;
+              text-decoration: none;
+              border: none;
+              outline: none;
+              transition-property: color;
+              transition-timing-function: ease-out;
+              transition-duration: 0.3s;
+              &:hover {
+                color: $lightorangeRatesButtonBackground;
+                transition-property: color;
+                transition-timing-function: ease-in;
+                transition-duration: 0.3s;
+              }
+            }
+          }
+        }
+      }
+      & .contacts-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        @include e(title) {
+          font-size: 36px;
+          font-family: $lato;
+          font-weight: 300;
+          color: $lightorangeRatesButtonBackground;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        @include e(address) {
+          font-size: 16px;
+          font-family: $lato;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+        }
+        & a {
+          font-size: 16px;
+          font-family: $lato;
+          font-weight: 400;
+          color: $white;
+          text-decoration: none;
+          border: none;
+          outline: none;
+          transition-property: color;
+          transition-timing-function: ease-in;
+          transition-duration: 0.3s;
+          &:hover {
+            color: $lightorangeRatesButtonBackground;
+            transition-property: color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+      }
+    }
+    @include e(developed) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      & a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        font-size: 17px;
+        font-family: $lato;
+        font-weight: 400;
+        text-align: center;
+        color: $white;
+        text-decoration: none;
+        outline: none;
+        opacity: 0.3;
+        &:hover {
+          opacity: 1;
+          transition-property: opacity;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in;
+        }
+        &:hover .web-studio:after {
+          transform: scaleX(1);
+          transform-origin: left center;
+          transition-property: transform;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in;
+        }
+        & .web-studio {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          font-size: 17px;
+          font-family: $lato;
+          font-weight: 400;
+          text-align: center;
+          color: $white;
+          position: relative;
+          transition-property: color;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+          &:hover {
+            color: $lightorangeRatesButtonBackground;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+          }
+          &:after {
+            content: "";
+            display: flex;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $lightorangeRatesButtonBackground;
+            transform: scaleX(0);
+            transform-origin: center right;
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+          }
+        }
+      }
+    }
+  }
+}

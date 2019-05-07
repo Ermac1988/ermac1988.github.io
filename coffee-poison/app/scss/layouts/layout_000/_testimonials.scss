@@ -1,0 +1,98 @@
+#testimonials {
+  background-color: $bordoRatesButtonBackground;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  & .testimonials-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(title) {
+      font-size: 24px;
+      font-family: $lato;
+      font-weight: 700;
+      color: $lightorangeRatesButtonBackground;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    @include e(slider) {
+      & .testimonal-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        & > div {
+          &:nth-of-type(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            & a {
+              border: none;
+              outline: none;
+              & img {
+                border-radius: 50%;
+                min-width: 110px;
+                height: 110px;
+              }
+            }
+            & div {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: stretch;
+              margin-left: 10px;
+              & h3 {
+                font-size: 18px;
+                font-family: $lato;
+                font-weight: 700;
+                color: $lightorangeRatesButtonBackground;
+                text-align: left;
+                line-height: 19px;
+                margin-bottom: 10px;
+              }
+              & span {
+                font-size: 14px;
+                font-family: $lato;
+                font-weight: 400;
+                color: $white;
+                text-align: left;
+                letter-spacing: 0;
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            & time {
+              font-size: 12px;
+              font-family: $lato;
+              font-weight: 400;
+              color: #968585;
+              text-align: left;
+              margin-right: 10px;
+            }
+            & p {
+              font-size: 14px;
+              font-family: $lato;
+              font-weight: 400;
+              color: $white;
+              text-align: left;
+              line-height: 18px;
+              background: linear-gradient($lightorangeRatesButtonBackground, $bordoRatesButtonBackground);
+              padding-top: 20px;
+              padding-right: 20px;
+              padding-bottom: 25px;
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

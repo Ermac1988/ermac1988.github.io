@@ -1,0 +1,106 @@
+#home-header {
+  background-color: $black;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-top: 25px;
+  padding-bottom: 45px;
+  & .home-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(upper) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      & .menu-box {
+        display: none;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: stretch;
+        & ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: stretch;
+          align-items: stretch;
+          & li {
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            align-items: stretch;
+            margin-right: 20px;
+            &:nth-last-of-type(1) {
+              margin-right: 0;
+            }
+            & a {
+              font-size: 14px;
+              font-family: $cocosignum;
+              font-weight: 400;
+              color: $white;
+              text-transform: uppercase;
+              text-decoration: none;
+              outline: none;
+              transition-property: color;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-out;
+              &:hover {
+                color: $orange;
+                transition-property: color;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-in;
+              }
+            }
+          }
+        }
+      }
+      & .phone-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        & a {
+          font-size: 14px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          color: $white;
+          text-decoration: none;
+          outline: none;
+          transition-property: color;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+          &:hover {
+            color: $orange;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+          }
+        }
+      }
+    }
+    @include e(lower) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      @include m(left) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        & a {
+          display: flex;
+          & img {
+            height: 100%;
+          }
+        }
+      }
+      @include m(right) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+#video {
+  background-color: $white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  & .video-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      font-size: 33px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 10px;
+      &:before {
+        content: url("../img/video.png");
+      }
+    }
+    @include e(subheader) {
+      font-size: 20px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $mainTextColor;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    @include e(videos) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-bottom: 30px;
+      & .slick-slide {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      & .video-slider-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        & a {
+          display: flex;
+          align-self: center;
+          margin-bottom: 20px;
+          position: relative;
+          &:before {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-image: url("../img/play.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+          }
+          &:hover {
+            &:before {
+              display: flex;
+            }
+          }
+          & img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

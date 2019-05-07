@@ -1,0 +1,108 @@
+#home-header {
+  position: relative;
+  padding-bottom: 280px;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    z-index: 100;
+    border-bottom: 70px solid $gray;
+    transform: rotate(0.000001deg);
+    right: 50%;
+    border-right: 1000px solid transparent;
+    border-left: 1000px solid;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    z-index: 100;
+    border-bottom: 70px solid $gray;
+    transform: rotate(0.000001deg);
+    left: 50%;
+    border-left: 1000px solid transparent;
+    border-right: 1000px solid;
+  }
+  & .home-header-box {
+    @include e(upper) {
+      justify-content: space-between;
+      & .menu-box {
+        display: flex;
+        & ul {
+          & li {
+            &:nth-last-of-type(1) {
+            }
+            & a {
+              &:hover {
+              }
+            }
+          }
+        }
+      }
+      & .phone-box {
+        & a {
+          &:nth-of-type(1) {
+          }
+          &:hover {
+          }
+        }
+      }
+    }
+    @include e(lower) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      @include m(left) {
+        width: 50%;
+        & a {
+          & img {
+          }
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        & p {
+          position: relative;
+          padding-top: 50px;
+          padding-bottom: 50px;
+          padding-right: 22px;
+          padding-left: 22px;
+          font-size: 36px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          color: $white;
+          text-align: left;
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 22px;
+            height: 22px;
+            border-top: 5px solid $white;
+            border-left: 5px solid $white;
+            border-top-left-radius: 5px;
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 22px;
+            height: 22px;
+            border-bottom: 5px solid $white;
+            border-right: 5px solid $white;
+            border-bottom-right-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}

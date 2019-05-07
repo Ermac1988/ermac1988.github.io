@@ -1,0 +1,18 @@
+.footer {
+  background-color: $footerBackground;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include e(copyright) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    & span {
+      font-size: 14px;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $white;
+      text-align: center;
+    }
+  }
+}

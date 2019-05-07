@@ -1,0 +1,50 @@
+#works-page {
+  & .works-page-box {
+    @include e(header) {
+    }
+    @include e(works) {
+      & .mix-it-up-filters {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        @include e(control) {
+          margin-right: 5px;
+          margin-bottom: 0;
+          &:nth-last-of-type(1) {
+            margin-right: 0;
+          }
+        }
+        & .mixitup-control-active {
+        }
+      }
+      & .mix-it-up-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+        & .item-box {
+          width: 20%;
+          margin-bottom: 30px;
+          padding-right: 15px;
+          padding-left: 15px;
+          &:nth-of-type(1) {
+            padding-left: 0;
+          }
+          &:nth-last-of-type(1) {
+            padding-right: 0;
+            margin-bottom: 30px;
+          }
+          @include e(link) {
+            & img {
+            }
+          }
+          @include e(header) {
+          }
+          @include e(text) {
+          }
+        }
+      }
+    }
+  }
+}

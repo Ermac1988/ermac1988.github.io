@@ -1,0 +1,45 @@
+#feedback {
+  padding-top: 125px;
+  padding-bottom: 95px;
+  & .feedback-box {
+    @include e(header) {
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 10px;
+    }
+    @include e(subtitle) {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+    @include e(form) {
+      & .fields-box {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        & .form-group {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 50%;
+          &:first-child {
+            margin-bottom: 0;
+            margin-right: 30px;
+          }
+          & label {
+            line-height: 42px;
+          }
+          & input {
+            width: 100%;
+            line-height: 42px;
+          }
+        }
+      }
+      & button {
+      }
+    }
+    @include e(message) {
+    }
+  }
+}

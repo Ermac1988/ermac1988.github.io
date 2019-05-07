@@ -1,0 +1,275 @@
+#about {
+  background-color: $white;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  & .about-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    &:before {
+      content: "";
+      width: 260px;
+      height: 4px;
+      background-color: #d1cccc;
+      position: absolute;
+      top: 0;
+    }
+    &:after {
+      content: "";
+      width: 260px;
+      height: 4px;
+      background-color: #d1cccc;
+      position: absolute;
+      bottom: 0;
+    }
+    @include e(header) {
+      font-size: 30px;
+      font-family: $openSans;
+      font-weight: 700;
+      color: $black;
+      text-align: center;
+      line-height: 42px;
+      margin-bottom: 30px;
+    }
+    @include e(text) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & .visible-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include e(first-text) {
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 70px;
+        }
+        @include e(second-text) {
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+        }
+      }
+      & .hidden-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        margin-top: 70px;
+        @include e(first-header) {
+          font-size: 20px;
+          font-family: $openSans;
+          font-weight: 700;
+          color: $black;
+          text-align: center;
+          line-height: 32px;
+          margin-bottom: 10px;
+        }
+        @include e(second-header) {
+          font-size: 20px;
+          font-family: $openSans;
+          font-weight: 700;
+          color: $black;
+          text-align: center;
+          line-height: 32px;
+          margin-bottom: 10px;
+        }
+        @include e(third-header) {
+          font-size: 20px;
+          font-family: $openSans;
+          font-weight: 700;
+          color: $black;
+          text-align: center;
+          line-height: 32px;
+          margin-bottom: 10px;
+        }
+        @include e(first-list) {
+          align-self: flex-start;
+          line-height: 28px;
+          margin-bottom: 30px;
+          & li {
+            font-size: 16px;
+            font-family: $openSans;
+            font-weight: 400;
+            color: $grayText;
+            text-align: left;
+            line-height: 28px;
+            margin-bottom: 10px;
+            &:nth-last-of-type(1) {
+              margin-bottom: 0;
+            }
+            &:before {
+              content: "\f00c";
+              font-size: 20px;
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              color: $mainYellow;
+              margin-right: 10px;
+            }
+          }
+        }
+        @include e(second-list) {
+          align-self: flex-start;
+          margin-bottom: 30px;
+          & li {
+            font-size: 16px;
+            font-family: $openSans;
+            font-weight: 400;
+            color: $grayText;
+            text-align: left;
+            line-height: 28px;
+            margin-bottom: 10px;
+            &:nth-last-of-type(1) {
+              margin-bottom: 0;
+            }
+            &:before {
+              content: "\f00c";
+              font-size: 20px;
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              color: $mainYellow;
+              margin-right: 10px;
+            }
+          }
+        }
+        @include e(first-text) {
+          align-self: flex-start;
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 10px;
+        }
+        @include e(second-text) {
+          align-self: flex-start;
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 10px;
+        }
+        @include e(third-text) {
+          align-self: flex-start;
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 10px;
+        }
+        @include e(fourth-text) {
+          align-self: flex-start;
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 30px;
+        }
+        @include e(fifth-text) {
+          align-self: flex-start;
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 10px;
+        }
+        @include e(sixth-text) {
+          align-self: flex-start;
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 10px;
+          & a {
+            color: $grayText;
+            border-bottom: 1px dotted $grayText;
+            text-decoration: none;
+          }
+        }
+        @include e(seventh-text) {
+          align-self: flex-start;
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $grayText;
+          text-align: left;
+          line-height: 28px;
+          margin-bottom: 30px;
+        }
+      }
+      .show {
+        transition-property: overflow;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        height: 100%;
+        overflow: auto;
+      }
+    }
+    @include e(more) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $grayText;
+      text-align: left;
+      line-height: 28px;
+      text-decoration: none;
+      &:hover i {
+        color: $black;
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+      }
+      &:before {
+        content: "Подробнее";
+      }
+      & i {
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        font-size: 30px;
+        color: $mainYellow;
+      }
+    }
+    .show-button {
+      & i {
+        transform: rotate(180deg);
+      }
+      &:before {
+        content: "";
+      }
+      &:after {
+        content: "Свернуть";
+      }
+    }
+  }
+}

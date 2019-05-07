@@ -1,0 +1,177 @@
+#contacts-page {
+  background-color: $white;
+  margin-bottom: 85px;
+  & .contacts-page-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      font-size: 12px;
+      font-family: $openSans;
+      font-weight: 400;
+      text-align: left;
+      color: $mainTextColor;
+      text-transform: uppercase;
+      border-top: 1px solid #999;
+      padding-top: 15px;
+      margin-bottom: 35px;
+    }
+    @include e(contacts) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-bottom: 50px;
+      @include m(left) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-bottom: 20px;
+        & p {
+          font-size: 12px;
+          font-family: $openSans;
+          font-weight: 400;
+          text-align: left;
+          color: $mainTextColor;
+          margin-bottom: 10px;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+      }
+    }
+    @include e(form) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      align-self: center;
+      width: 280px;
+      & h2 {
+        font-size: 12px;
+        font-family: $openSans;
+        font-weight: 400;
+        text-align: left;
+        color: $mainTextColor;
+        margin-bottom: 35px;
+      }
+      & #contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        & .form-group {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+          &:nth-last-of-type(1) {
+            margin-bottom: 30px;
+          }
+          & label {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: left;
+            color: $mainTextColor;
+            width: 30%;
+          }
+          & input {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: center;
+            color: $mainTextColor;
+            text-decoration: none;
+            background-color: $white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border: 1px solid $blue;
+            border-radius: 5px;
+            width: 70%;
+          }
+          & textarea {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: center;
+            color: $mainTextColor;
+            text-decoration: none;
+            background-color: $white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            border: 1px solid $blue;
+            border-radius: 5px;
+            width: 70%;
+          }
+        }
+        & button {
+          align-self: center;
+          font-size: 12px;
+          font-family: $openSans;
+          font-weight: 400;
+          text-align: center;
+          color: $white;
+          text-decoration: none;
+          background-color: $blue;
+          cursor: pointer;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 25px;
+          padding-right: 25px;
+          border: 1px solid $blue;
+          border-radius: 5px;
+          transition-property: all;
+          transition-timing-function: ease-out;
+          transition-duration: 0.3s;
+          &:hover {
+            color: $blue;
+            background-color: $white;
+            transition-property: all;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+      }
+      & .result-box {
+        display: none;
+        font-size: 18px;
+        font-family: $openSans;
+        font-weight: 400;
+        color: $blue;
+        text-align: center;
+      }
+    }
+    & #map {
+      & .map-box {
+        @include e(title) {
+          position: absolute;
+          left: -9999px;
+          top: -9999px;
+        }
+        @include e(map) {
+          & iframe {
+            width: 100%;
+          }
+        }
+        & #map-wrapper {
+          width: 100%;
+          min-height: 400px;
+        }
+      }
+    }
+  }
+}

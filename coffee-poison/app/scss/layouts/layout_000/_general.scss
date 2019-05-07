@@ -3,8 +3,16 @@ body {
   font-family: $lato;
   color: $black;
   background-color: $white;
-  scrollbar-face-color: slategray;
-  scrollbar-track-color: #b8c0c8;
+  scrollbar-face-color: $bordoRatesButtonBackground;
+  scrollbar-track-color: $lightorangeRatesButtonBackground;
+}
+
+.brand {
+  font-size: 20px;
+  font-family: $lato;
+  font-weight: 700;
+  color: $bordoRatesButtonBackground;
+  text-align: center;
 }
 
 .hidden{
@@ -20,11 +28,11 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: slategray;
+  background-color: $bordoRatesButtonBackground;
 }
 
 ::-webkit-scrollbar-track {
-  background: #b8c0c8;
+  background-color: $lightorangeRatesButtonBackground;
 }
 
 .img-fluid {
@@ -75,8 +83,65 @@ body {
   }
 }
 
-/*
+::-webkit-input-placeholder {
+  color: $bordoRatesButtonBackground;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+:-ms-input-placeholder {
+  color: $bordoRatesButtonBackground;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+::-moz-placeholder {
+  color: $bordoRatesButtonBackground;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+:-moz-placeholder {
+  color: $bordoRatesButtonBackground;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
 #page-preloader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -87,17 +152,16 @@ body {
 }
 
 #page-preloader .spinner {
-  width: 80px;
-  height: 78px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background: url('../img/loading.gif') no-repeat 50% 50%;
-  margin: -16px 0 0 -16px;
+  width: 200px;
+  height: 200px;
+  background-image: url('../img/preloader.svg');
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 #scrollTop {
-  font-size: rem(50px);
+  font-size: 50px;
   display: none;
   position: fixed;
   bottom: 20px;
@@ -105,12 +169,30 @@ body {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: $pinkText;
+  background-color: $bordoRatesButtonBackground;
   color: $white;
   cursor: pointer;
   border-radius: 50%;
-
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
   &:hover {
-    background-color: $blueText;
+    color: $bordoRatesButtonBackground;
+    background-color: $white;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
   }
-}*/
+}
+
+.slick-dots li button::before {
+  font-size: 10px;
+  color: $white;
+}
+.slick-dots li.slick-active button:before {
+  color: $white;
+  opacity: 1;
+}
+.slick-dots {
+  bottom: -35px;
+}

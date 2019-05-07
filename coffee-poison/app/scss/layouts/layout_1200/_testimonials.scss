@@ -1,0 +1,35 @@
+#testimonials {
+  & .testimonials-box {
+    @include e(title) {
+      font-size: 48px;
+      font-weight: 300;
+    }
+    @include e(slider) {
+      & .testimonal-wrapper {
+        & > div {
+          &:nth-of-type(1) {
+            & a {
+              & img {
+                min-width: 210px;
+                height: 210px;
+              }
+            }
+            & div {
+              & h3 {
+              }
+              & span {
+
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            & time {
+            }
+            & p {
+            }
+          }
+        }
+      }
+    }
+  }
+}

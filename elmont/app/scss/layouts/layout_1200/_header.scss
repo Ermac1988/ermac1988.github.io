@@ -1,0 +1,55 @@
+#header {
+  & .header-box {
+    @include e(logo) {
+      width: 50%;
+      & .phone-box {
+        display: flex;
+      }
+    }
+    @include e(menu) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      & .nav-icon {
+        display: none;
+      }
+      & ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-left: 1px solid #ddd;
+        padding-right: 25px;
+        padding-left: 25px;
+        & li {
+          margin-bottom: 5px;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+          & a {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            color: $mainTextColor;
+            text-align: center;
+            text-decoration: none;
+            padding-right: 0;
+            padding-left: 0;
+            border-bottom: none;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            &:hover {
+              transition-property: color;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in;
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}

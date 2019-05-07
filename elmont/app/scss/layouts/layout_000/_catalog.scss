@@ -1,0 +1,78 @@
+#catalog-page {
+  background-color: $white;
+  margin-bottom: 85px;
+  & .catalog-page-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      font-size: 12px;
+      font-family: $openSans;
+      font-weight: 400;
+      text-align: left;
+      color: $mainTextColor;
+      text-transform: uppercase;
+      border-top: 1px solid #999;
+      padding-top: 15px;
+      margin-bottom: 35px;
+    }
+    @include e(items) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-bottom: 35px;
+      & .row-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+        & .item-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          width: 30%;
+          margin-bottom: 30px;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+          @include e(link) {
+            display: flex;
+            margin-bottom: 15px;
+            & img {
+              max-height: 200px;
+            }
+          }
+          @include e(header) {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: left;
+            color: $mainTextColor;
+            margin-bottom: 5px;
+          }
+          @include e(text) {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: left;
+            color: $mainTextColor;
+          }
+        }
+      }
+    }
+    @include e(text) {
+      font-size: 12px;
+      font-family: $openSans;
+      font-weight: 400;
+      text-align: left;
+      color: $mainTextColor;
+    }
+  }
+}

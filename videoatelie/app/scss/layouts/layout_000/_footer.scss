@@ -1,0 +1,345 @@
+#footer {
+  background-color: $black;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  & .footer-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(main) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-bottom: 30px;
+      @include m(left) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        order: 1;
+        width: 100%;
+        margin-bottom: 50px;
+        & .footer-logo-box {
+          display: flex;
+        }
+        & .footer-menu-box {
+          display: none;
+          flex-direction: row;
+          justify-content: stretch;
+          align-items: stretch;
+          & ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: stretch;
+            & li {
+              display: flex;
+              flex-direction: row;
+              justify-content: stretch;
+              align-items: stretch;
+              margin-bottom: 15px;
+              &:nth-last-of-type(1) {
+                margin-bottom: 0;
+              }
+              & a {
+                font-size: 14px;
+                font-family: $cocosignum;
+                font-weight: 400;
+                color: $white;
+                text-transform: uppercase;
+                text-decoration: none;
+                outline: none;
+                transition-property: color;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+                &:hover {
+                  color: $orange;
+                  transition-property: color;
+                  transition-duration: 0.3s;
+                  transition-timing-function: ease-in;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        order: 2;
+        width: 100%;
+        & .footer-contacts-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+          margin-bottom: 15px;
+          & a {
+            font-size: 18px;
+            font-family: $cocosignum;
+            font-weight: 400;
+            text-align: center;
+            color: $white;
+            text-decoration: none;
+            outline: none;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            margin-bottom: 5px;
+            &:nth-last-of-type(1) {
+              margin-bottom: 0;
+            }
+            &:hover {
+              color: $orange;
+              transition-property: color;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-in;
+            }
+          }
+        }
+        & .copyright-box {
+          font-size: 14px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          text-align: center;
+          color: $mainTextColor;
+          text-decoration: none;
+        }
+      }
+    }
+    @include e(developed) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      & a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        font-size: 14px;
+        font-family: $cocosignum;
+        font-weight: 400;
+        text-align: center;
+        color: #8a8a8a;
+        text-decoration: none;
+        outline: none;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          transition-property: opacity;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in;
+        }
+        &:hover .web-studio:after {
+          transform: scaleX(1);
+          transform-origin: left center;
+          transition-property: transform;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in;
+        }
+        & .web-studio {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          font-family: $cocosignum;
+          font-weight: 400;
+          text-align: center;
+          color: #8a8a8a;
+          margin-left: 10px;
+          position: relative;
+          transition-property: color;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+          &:hover {
+            color: $orange;
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+          }
+          &:after {
+            content: "";
+            display: flex;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $orange;
+            transform: scaleX(0);
+            transform-origin: center right;
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+.order-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  overflow: hidden;
+  max-width: 480px;
+  border-radius: 14px;
+  padding-bottom: 25px;
+  border: 4px solid $pink;
+  background-color: $white;
+  @include e(header) {
+    font-size: 36px;
+    font-family: $cocosignum;
+    font-weight: 400;
+    color: $white;
+    text-align: center;
+    width: 100%;
+    background-color: $pink;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+  }
+  @include e(form) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-self: center;
+    padding-left: 45px;
+    padding-right: 45px;
+    @include m(left) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 100%;
+      & input {
+        border-bottom: 1px solid $mainTextColor;
+        outline: none;
+        font-size: 16px;
+        font-family: $cocosignum;
+        font-weight: 400;
+        color: $mainTextColor;
+        text-align: center;
+        margin-bottom: 30px;
+        min-height: 25px;
+      }
+    }
+    @include m(right) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 100%;
+      & input {
+        border-bottom: 1px solid $mainTextColor;
+        outline: none;
+        font-size: 16px;
+        font-family: $cocosignum;
+        font-weight: 400;
+        color: $mainTextColor;
+        text-align: center;
+        margin-bottom: 30px;
+        min-height: 25px;
+        &:nth-last-of-type(1) {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    & button {
+      font-size: 18px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 35px;
+      padding-right: 35px;
+      cursor: pointer;
+      background-color: $pink;
+      border: 1px solid transparent;
+      outline: none;
+      transition-property: all;
+      transition-timing-function: ease-out;
+      transition-duration: 0.3s;
+      border-radius: 10px;
+      &:hover {
+        color: $pink;
+        border: 1px solid $pink;
+        background-color: $white;
+        transition-property: all;
+        transition-timing-function: ease-in;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+}
+#success {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 480px;
+  padding-top: 45px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  border-radius: 15px;
+  border: 4px solid $pink;
+  background-color: $white;
+  & div {
+    display: none;
+  }
+  & p {
+    font-size: 25px;
+    font-family: $cocosignum;
+    font-weight: 400;
+    color: $mainTextColor;
+    text-align: left;
+    line-height: 42px;
+    width: 100%;
+  }
+}
+#fail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 480px;
+  padding-top: 45px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  border-radius: 15px;
+  border: 4px solid $pink;
+  background-color: $white;
+  & p {
+    font-size: 25px;
+    font-family: $cocosignum;
+    font-weight: 400;
+    color: $mainTextColor;
+    text-align: left;
+    line-height: 42px;
+  }
+}

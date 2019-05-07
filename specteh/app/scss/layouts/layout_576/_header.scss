@@ -1,0 +1,83 @@
+header {
+  & h1 {
+  }
+  & .header-box {
+    @include e(navigation) {
+      & .logo-box {
+        & img {
+        }
+      }
+      & .shedule-box {
+        & b {
+        }
+      }
+      & .nav-box {
+        & h2 {
+        }
+        @include e(icon) {
+          & span {
+            &:nth-last-child(1) {
+            }
+          }
+        }
+        @include e(items) {
+          & li {
+            &:nth-last-child(1) {
+            }
+            & a {
+              &:hover {
+              }
+            }
+          }
+        }
+      }
+      & .mobile-callback-box {
+      }
+      & .callback-box {
+        & a {
+        }
+      }
+      & .open > .nav-box__icon {
+        & span:nth-child(1) {
+        }
+        & span:nth-child(2) {
+        }
+        & span:nth-child(3) {
+        }
+      }
+      & .open > ul {
+        & li {
+          & a {
+            &:hover {
+            }
+          }
+        }
+      }
+    }
+    & .mobile-shedule-box {
+      & b {
+      }
+    }
+    @include e(content) {
+      & .img-box {
+        @include e(text) {
+          top: -15px;
+          & b:nth-child(1) {
+          }
+          & b:nth-child(2) {
+          }
+        }
+        @include e(img) {
+        }
+      }
+      & .text-box {
+        @include e(header) {
+        }
+        @include e(subtitle) {
+        }
+        @include e(button) {
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Центр обучения бариста «Coffee Poison»</title>
-    <meta name="description" content="">
+    <title>Курсы бариста/открыть свою кофейню Киев | «Coffee Poison»</title>
+    <meta name="description" content="Индивидуальный курс в Киеве от 1000грн. С нуля до профессионала. Обучения персонала для кофейни.">
+    <!-- Chrome, Firefox, Opera -->
+    <meta name="theme-color" content="#503434">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#503434">
+    <!--iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- Twitter Open Graph protocol -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="COFFEE POISON">
+    <meta name="twitter:description" content="ЦЕНТР ОБУЧЕНИЯ БАРИСТА">
+    <meta name="twitter:url" content="https://baristacoffeepoison.com.ua/">
+    <meta name="twitter:image" content="img/logo.png">
+    <meta name="twitter:image:alt" content="img/logo.png">
+    <!-- Facebook, Vkontakte, Odnoklassniki Open Graph protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Baristacoffeepoison.com.ua">
+    <meta property="og:title" content="COFFEE POISON">
+    <meta property="og:description" content="ЦЕНТР ОБУЧЕНИЯ БАРИСТА">
+    <meta property="og:url" content="https://baristacoffeepoison.com.ua/">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="img/logo.png">
+    <meta property="og:image:width" content="968">
+    <meta property="og:image:height" content="504">
+
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -22,67 +47,70 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <script>FontAwesomeConfig = { searchPseudoElements: true };</script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="page-preloader">
+        <span class="spinner"></span>
+    </div>
     <header id="header">
         <div class="header-box container">
             <div class="header-box__content">
                 <div class="header-box__logo">
-                    <img class="img-fluid" src="img/logo.png" alt="" width="100" height="100">
+                    <img src="img/logo.png" alt="логотип «Coffee Poison»" width="100" height="100">
                     <span>Центр<br> обучения бариста<br> «Coffee Poison»</span>
                 </div>
                 <div class="header-box__contacts">
                     <span>г. Киев<br> ул. Богдана Хмельницкого 16/22</span>
-                    <a href="tel:+380937449212">+380937449212</a>
-                    <a href="tel:+380997323943">+380997323943</a>
+                    <a href="tel:+380937449212">+38 (093) 744 92 12</a>
+                    <a href="tel:+38066487775">+38 (066) 484 77 75</a>
                 </div>
             </div>
             <h1 class="header-box__title">Курсы бариста в Киеве</h1>
         </div>
     </header>
     <main>
-        <section id="rates">
-           <div class="rates-box container">
-               <h2 class="rates-box__title">Наши тарифы и услуги</h2>
-               <div class="rates-box__items">
-                   <div class="rates-box__items_left">
-                       <img class="img-fluid" src="img/rate-base.jpg" alt="" width="370" height="370">
+        <section id="prices">
+           <div class="prices-box container">
+               <h2 class="prices-box__title">Наши тарифы и услуги</h2>
+               <div class="prices-box__items">
+                   <div class="prices-box__items_left">
+                       <img src="img/price-base.jpg" alt="цена курса «База»" width="370" height="370">
                        <div>
                            <h3>База</h3>
                            <span>1000 грн</span>
                            <p>Курс предназначен для тех, кто хочет стать профессиональным бариста</p>
                        </div>
-                       <a href="#">Записаться на курсы</a>
-                       <a href="#">Получить подробную информацию по данному курсу</a>
+                       <a href="#form-popup" class="form-popup">Записаться на курсы</a>
+                       <a href="#base-popup" class="description-popup animated infinite pulse">Получить подробную информацию по данному курсу</a>
                    </div>
-                   <div class="rates-box__items_center">
-                       <img class="img-fluid" src="img/rate-latte.jpg" alt="" width="370" height="370">
+                   <div class="prices-box__items_center">
+                       <img src="img/price-latte.jpg" alt="цена курса «Латте Арт»" width="370" height="370">
                        <div>
-                           <h3>Латте арт</h3>
+                           <h3>Латте Арт</h3>
                            <span>2500 грн</span>
-                           <p>Курс предназначен для тех, кто хочет стать профессиональным бариста</p>
+                           <p>Курс предназначен для тех, кто хочет освоить технику рисования на кофе</p>
                        </div>
-                       <a href="#">Записаться на курсы</a>
-                       <a href="#">Получить подробную информацию по данному курсу</a>
+                       <a href="#form-popup" class="form-popup">Записаться на курсы</a>
+                       <a href="#latte-popup" class="description-popup animated infinite pulse">Получить подробную информацию по данному курсу</a>
                    </div>
-                   <div class="rates-box__items_right">
-                       <img class="img-fluid" src="img/rate-business.jpg" alt="" width="370" height="370">
+                   <div class="prices-box__items_right">
+                       <img src="img/price-business.jpg" alt="цена курса «Бизнес»" width="370" height="370">
                        <div>
                            <h3>Бизнес</h3>
                            <span>3000 грн</span>
-                           <p>Курс предназначен для тех, кто хочет стать профессиональным бариста</p>
+                           <p>Курс предназначен для тех, кто хочет открыть свою кофейню</p>
                        </div>
-                       <a href="#">Записаться на курсы</a>
-                       <a href="#">Получить подробную информацию по данному курсу</a>
+                       <a href="#form-popup" class="form-popup">Записаться на курсы</a>
+                       <a href="#business-popup" class="description-popup animated infinite pulse">Получить подробную информацию по данному курсу</a>
                    </div>
                </div>
-               <a href="#" class="rates-box__button" title="Зазкать бесплатную консультацию">Заказать</a>
+               <a href="#order-popup" class="prices-box__button form-popup" title="Зазкать бесплатную консультацию">Заказать</a>
            </div>
         </section>
         <section id="advantages">
@@ -90,156 +118,325 @@
                 <h2 class="advantages-box__title">Наши преимущества</h2>
                 <div class="advantages-box__items">
                     <div class="advantages-box__items_left">
-                        <img class="img-fluid" src="img/icon-1.png" alt="" width="79" height="95">
-                        <h3>Индивидуальное обучения</h3>
+                        <img class="img-fluid" src="img/advantage-1.png" alt="иконка индивидуальное обучение" width="134" height="95">
+                        <h3>Индивидуальное обучение</h3>
                     </div>
                     <div class="advantages-box__items_center">
-                        <img class="img-fluid" src="img/icon-2.png" alt="" width="70" height="71">
-                        <h3>Самые низкие тарифы на ринке</h3>
+                        <img class="img-fluid" src="img/advantage-2.png" alt="иконка самые низкие тарифы" width="134" height="95">
+                        <h3>Самые низкие тарифы</h3>
                     </div>
                     <div class="advantages-box__items_right">
-                        <img class="img-fluid" src="img/icon-3.png" alt="" width="134" height="74">
-                        <h3>Поддержка каждого ученика после прохождения любого из 3 курсов</h3>
+                        <img class="img-fluid" src="img/advantage-3.png" alt="иконка поддержка каждого ученика" width="134" height="95">
+                        <h3>Поддержка каждого ученика</h3>
                     </div>
                 </div>
             </div>
         </section>
         <section id="testimonials">
-            <div class="testimonials-box">
+            <div class="testimonials-box container">
                 <h2 class="testimonials-box__title">Отзывы наших выпускников</h2>
                 <div class="testimonials-box__slider">
-                    <div>
+                    <div class="testimonal-wrapper">
                         <div>
-                            <img src="img/testimonial-1.jpg" alt="" width="210" height="210">
+                            <a class="image-popup" href="img/testimonial-3.jpg">
+                                <img src="img/testimonial-tumbnail-3.jpg" alt="отзыв Гинкул Татьяна Анатольевна" width="210" height="210">
+                            </a>
                             <div>
-                                <h3>Татьяна Короткий</h3>
-                                <span>Владелец сети кофеен</span>
+                                <h3>Скетецька Ірина Анатоліївна</h3>
+                                <span>курс «Бизнес»</span>
                             </div>
                         </div>
                         <div>
                             <time datetime="2012-12-23">23.12<br> 2012</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo turpis, venenatis nec aliquet in, vestibulum ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dictum consectetur ligula, id pulvinar tellus dignissim non. Nulla enim quam, tincidunt non elit eu, condimentum bibendum dolor. Mauris quis eros et libero tristique lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat, justo et mattis blandit, felis turpis feugiat dolor, vel fringilla lorem augue ut tortor. Etiam faucibus felis sed ex molestie aliquam. Pellentesque quis justo id est iaculis scelerisque. Morbi vel lectus volutpat, venenatis dolor at, eleifend ante. Vivamus volutpat dignissim mi, sed iaculis tortor efficitur vitae. Suspendisse in porta ipsum, in tincidunt enim. Fusce quis nibh eget magna tincidunt elementum. Sed at commodo nisl, placerat rutrum sem.</p>
+                            <p>Прошла курс в школе при «Coffee Poison». Очень понравилось! Спасибо большое Владу за легкую и доступную подачу материала и отличную практику.</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="testimonal-wrapper">
                         <div>
-                            <img src="img/testimonial-1.jpg" alt="" width="210" height="210">
+                            <a class="image-popup" href="img/testimonial-3.jpg">
+                                <img src="img/testimonial-tumbnail-3.jpg" alt="отзыв Гинкул Татьяна Анатольевна" width="210" height="210">
+                            </a>
                             <div>
-                                <h3>Татьяна Короткий</h3>
-                                <span>Владелец сети кофеен</span>
+                                <h3>Гинкул Татьяна Анатольевна</h3>
+                                <span>курс «Бизнес»</span>
                             </div>
                         </div>
                         <div>
-                            <time datetime="2012-12-23">23.12<br> 2012</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo turpis, venenatis nec aliquet in, vestibulum ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dictum consectetur ligula, id pulvinar tellus dignissim non. Nulla enim quam, tincidunt non elit eu, condimentum bibendum dolor. Mauris quis eros et libero tristique lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat, justo et mattis blandit, felis turpis feugiat dolor, vel fringilla lorem augue ut tortor. Etiam faucibus felis sed ex molestie aliquam. Pellentesque quis justo id est iaculis scelerisque. Morbi vel lectus volutpat, venenatis dolor at, eleifend ante. Vivamus volutpat dignissim mi, sed iaculis tortor efficitur vitae. Suspendisse in porta ipsum, in tincidunt enim. Fusce quis nibh eget magna tincidunt elementum. Sed at commodo nisl, placerat rutrum sem.</p>
+                            <time datetime="2018-07-27">27.07<br> 2018</time>
+                            <p>Хотим с мужем поблагодарить за полученные знания и навыки. Влидаслав — вы превосходный преподаватель. Очень грамотно и систематично построен теоретический курс «Бизнес». Но это не просто теория — вы делитесь жизненным опытом в ведении кофейного бизнеса... Сейчас не многие готовы делиться секретами успеха)) А после практической части курса мы с уверенностью можем  сказать, что умеем варить правильный кофе, знаем все тонкости и нюансы в его приготовлении. И мы ну просто оооочень довольны,что обратились именно в вашу школу... Получили абсолютно всё, чтобы максимально быстро и организованно открыть свой собственный кофейный бизнесс. Ребята, вы крутые! Желаем вам успехов и процветания!</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="testimonal-wrapper">
                         <div>
-                            <img src="img/testimonial-1.jpg" alt="" width="210" height="210">
+                            <a class="image-popup" href="img/testimonial-4.jpg">
+                                <img src="img/testimonial-tumbnail-4.jpg" alt="отзыв Курдюмова Ирина Николаевна" width="210" height="210">
+                            </a>
                             <div>
-                                <h3>Татьяна Короткий</h3>
-                                <span>Владелец сети кофеен</span>
+                                <h3>Курдюмова Ирина Николаевна</h3>
+                                <span>курс «Бизнес»</span>
                             </div>
                         </div>
                         <div>
-                            <time datetime="2012-12-23">23.12<br> 2012</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo turpis, venenatis nec aliquet in, vestibulum ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dictum consectetur ligula, id pulvinar tellus dignissim non. Nulla enim quam, tincidunt non elit eu, condimentum bibendum dolor. Mauris quis eros et libero tristique lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat, justo et mattis blandit, felis turpis feugiat dolor, vel fringilla lorem augue ut tortor. Etiam faucibus felis sed ex molestie aliquam. Pellentesque quis justo id est iaculis scelerisque. Morbi vel lectus volutpat, venenatis dolor at, eleifend ante. Vivamus volutpat dignissim mi, sed iaculis tortor efficitur vitae. Suspendisse in porta ipsum, in tincidunt enim. Fusce quis nibh eget magna tincidunt elementum. Sed at commodo nisl, placerat rutrum sem.</p>
+                            <time datetime="2017-12-11">11.12<br> 2017</time>
+                            <p>На правах человека, покорившего этот «Эверест» под названием — «открытие кофейни», заявляю)) Пройдя школу «Coffee Poison», я смогла воплотить свою мечту в жизнь. Помимо необходимых мне знаний, я получила мотивацию, которая позволила мне не стать выпускником-отличником с " сервантным" дипломом. Я благодарна школе в лице моего учителя Влада, который стал для меня примером, за-то, что получила информацию доступно, понятно и в полном объёме. Благодарна за-то, что получаю ответы на свои вопросы и по сей день, а у меня их миллион. Рекомендую всем, кто действительно нацелен на успех!</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="testimonal-wrapper">
                         <div>
-                            <img src="img/testimonial-1.jpg" alt="" width="210" height="210">
+                            <a class="image-popup" href="img/testimonial-5.jpg">
+                                <img src="img/testimonial-tumbnail-5.jpg" alt="отзыв Поліщук Марія Дмитрівна" width="210" height="210">
+                            </a>
                             <div>
-                                <h3>Татьяна Короткий</h3>
-                                <span>Владелец сети кофеен</span>
+                                <h3>Поліщук Марія Дмитрівна</h3>
+                                <span>курс «Бизнес»</span>
                             </div>
                         </div>
                         <div>
-                            <time datetime="2012-12-23">23.12<br> 2012</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo turpis, venenatis nec aliquet in, vestibulum ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dictum consectetur ligula, id pulvinar tellus dignissim non. Nulla enim quam, tincidunt non elit eu, condimentum bibendum dolor. Mauris quis eros et libero tristique lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat, justo et mattis blandit, felis turpis feugiat dolor, vel fringilla lorem augue ut tortor. Etiam faucibus felis sed ex molestie aliquam. Pellentesque quis justo id est iaculis scelerisque. Morbi vel lectus volutpat, venenatis dolor at, eleifend ante. Vivamus volutpat dignissim mi, sed iaculis tortor efficitur vitae. Suspendisse in porta ipsum, in tincidunt enim. Fusce quis nibh eget magna tincidunt elementum. Sed at commodo nisl, placerat rutrum sem.</p>
+                            <time datetime="2018-02-23">03.02<br> 2018</time>
+                            <p>Проходила курс «Бизнес», все супер, Владислав доступно, легко, профессионально показал, рассказал, научил. Полезный опыт, советую. Теперь веду свой бизнес.</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="testimonal-wrapper">
                         <div>
-                            <img src="img/testimonial-1.jpg" alt="" width="210" height="210">
+                            <a class="image-popup" href="img/testimonial-6.jpg">
+                                <img src="img/testimonial-tumbnail-6.jpg" alt="отзыв Вєлєс Ірина Анатоліївна" width="210" height="210">
+                            </a>
                             <div>
-                                <h3>Татьяна Короткий</h3>
-                                <span>Владелец сети кофеен</span>
+                                <h3>Вєлєс Ірина Анатоліївна</h3>
+                                <span>курс «Бизнес»</span>
                             </div>
                         </div>
                         <div>
-                            <time datetime="2012-12-23">23.12<br> 2012</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo turpis, venenatis nec aliquet in, vestibulum ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dictum consectetur ligula, id pulvinar tellus dignissim non. Nulla enim quam, tincidunt non elit eu, condimentum bibendum dolor. Mauris quis eros et libero tristique lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat, justo et mattis blandit, felis turpis feugiat dolor, vel fringilla lorem augue ut tortor. Etiam faucibus felis sed ex molestie aliquam. Pellentesque quis justo id est iaculis scelerisque. Morbi vel lectus volutpat, venenatis dolor at, eleifend ante. Vivamus volutpat dignissim mi, sed iaculis tortor efficitur vitae. Suspendisse in porta ipsum, in tincidunt enim. Fusce quis nibh eget magna tincidunt elementum. Sed at commodo nisl, placerat rutrum sem.</p>
+                            <time datetime="2018-06-21">21.06<br> 2018</time>
+                            <p>Я очень рада, что мне довелось получить знания по курсу «Бизнес» именно в вашей школе! В том формате построения курса обучения, который проводит Владислав, учиться необыкновенно интересно, комфортно и очень продуктивно! Ёмко, кратко, и по сути каждого вопроса. Так профессионально, очень понятно, честно и с таким азартом может делиться знаниями только талантливый и очень увлеченный своим делом человек! Уверена, что наше сотрудничество будет долгим и продуктивным! И, обращаясь с любым вопросом, я знаю,что получу качественный ответ. Успехов вам, дальнейшего процветания, пусть рядом всегда будет команда профессиональных, творческих единомышленников! Пусть все задуманное проекты воплощаются легко и результативно!!!</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="testimonal-wrapper">
                         <div>
-                            <img src="img/testimonial-1.jpg" alt="" width="210" height="210">
+                            <a class="image-popup" href="img/testimonial-7.jpg">
+                                <img src="img/testimonial-tumbnail-7.jpg" alt="отзыв Давиденко Максим Олексійович" width="210" height="210">
+                            </a>
                             <div>
-                                <h3>Татьяна Короткий</h3>
-                                <span>Владелец сети кофеен</span>
+                                <h3>Давиденко Максим Олексійович</h3>
+                                <span>курс «База»</span>
                             </div>
                         </div>
                         <div>
-                            <time datetime="2012-12-23">23.12<br> 2012</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo turpis, venenatis nec aliquet in, vestibulum ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dictum consectetur ligula, id pulvinar tellus dignissim non. Nulla enim quam, tincidunt non elit eu, condimentum bibendum dolor. Mauris quis eros et libero tristique lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat, justo et mattis blandit, felis turpis feugiat dolor, vel fringilla lorem augue ut tortor. Etiam faucibus felis sed ex molestie aliquam. Pellentesque quis justo id est iaculis scelerisque. Morbi vel lectus volutpat, venenatis dolor at, eleifend ante. Vivamus volutpat dignissim mi, sed iaculis tortor efficitur vitae. Suspendisse in porta ipsum, in tincidunt enim. Fusce quis nibh eget magna tincidunt elementum. Sed at commodo nisl, placerat rutrum sem.</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <img src="img/testimonial-1.jpg" alt="" width="210" height="210">
-                            <div>
-                                <h3>Татьяна Короткий</h3>
-                                <span>Владелец сети кофеен</span>
-                            </div>
-                        </div>
-                        <div>
-                            <time datetime="2012-12-23">23.12<br> 2012</time>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo turpis, venenatis nec aliquet in, vestibulum ac risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dictum consectetur ligula, id pulvinar tellus dignissim non. Nulla enim quam, tincidunt non elit eu, condimentum bibendum dolor. Mauris quis eros et libero tristique lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer volutpat, justo et mattis blandit, felis turpis feugiat dolor, vel fringilla lorem augue ut tortor. Etiam faucibus felis sed ex molestie aliquam. Pellentesque quis justo id est iaculis scelerisque. Morbi vel lectus volutpat, venenatis dolor at, eleifend ante. Vivamus volutpat dignissim mi, sed iaculis tortor efficitur vitae. Suspendisse in porta ipsum, in tincidunt enim. Fusce quis nibh eget magna tincidunt elementum. Sed at commodo nisl, placerat rutrum sem.</p>
+                            <time datetime="2018-09-15">15.09<br> 2018</time>
+                            <p>Хочу сказати величезне дякую школі Бариста «Coffee Poison» за їхній професіоналізм, віддачу та знання, які вони віддають на 200%. Я отримав колосальне задоволення, а головне правильні знання, стосовно справжнього смаку приготування кави!!!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="coach">
-            <div class="coach-box">
-                <img src="img/coach.jpg" alt="" class="coach-box__img" width="344" height="344">
+            <div class="coach-box container">
+                <h2>Преподаватель курса</h2>
+                <img src="img/coach.jpg" alt="преподователь курса Владислав Половец" class="coach-box__img" width="344" height="344">
                 <div class="coach-box__content">
-                    <h2 class="coach-box__title">Леонид Улыбайкин</h2>
+                    <h3 class="coach-box__title">Владислав Половец</h3>
                     <p class="coach-box__text">Коуч–бизнес тренер.<br> В кофейном бизнесе с 2010 года.<br> Более 600 учеников, которые стали профессиональными бариста.<br> 12 заведений различного формата открытых учениками прошедшими бизнес курс.</p>
                 </div>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about-box container">
+                <h2 class="about-box__header">О курсах бариста от «COFFEE POISON»</h2>
+                <div class="about-box__text">
+                    <div class="visible-text">
+                        <p class="visible-text__first-text">Бариста - востребованная профессия, наряду с сомелье и барменом. Каждый третий житель планеты начинает утро с чашечки кофе. Кофе покупают все, везде и всегда. Но, далеко не каждый способен удивить вкусовыми сочетаниями приготовленного напитка.<br> <span class="brand">«COFFEE POISON»</span> - это тренинг-центр, где можно получить все необходимые знания о сортах кофейных зерен, типах приготовления и основ ведения кофейного бизнеса.</p>
+                        <p class="visible-text__second-text">Курсы бариста понравятся как профессионалам, так и новичкам. Первые познакомятся с новыми технологиями, оборудованием и тенденциями оформления и подачи напитка. Начинающие бариста смогут пройти «курс молодого бойца» и усвоить базу для дальнейшей работы в этой области.<br> Обожаете аромат кофе, различаете тонкие нотки арабики и робусты? Только самостоятельное приготовление гарантирует насыщенный и вкусный напиток?  Школа бариста уже более 5-ти лет передает опыт мастеров и учит культуре потребления кофе.</p>
+                    </div>
+                    <div class="hidden-text">
+                        <h3 class="hidden-text__first-header">5 причин пройти курсы бариста COFFEE POISON</h3>
+                        <ul class="hidden-text__first-list">
+                            <li>Обучение может проходить как в индивидуальном, так и групповом порядке.</li>
+                            <li>Каждый тренинг бариста проходит под четким руководством опытных наставников, коуч тренера.</li>
+                            <li>Подготовка бариста включает теоретическую базу, которую обязательно удастся закрепить на практических занятиях.</li>
+                            <li>У нас можно получить всю информацию, чтобы открыть собственный бизнес, получить прибыльную профессию, по доступной цене.</li>
+                            <li>Мастер-класс бариста будет проходить в положительной атмосфере, на новейшем оборудовании, с качественной посудой и достойными сортами кофе.</li>
+                        </ul>
+                        <h3 class="hidden-text__second-header">Как происходит обучение бариста?</h3>
+                        <p class="hidden-text__first-text">Приготовление кофе - это искусство, где требуется проявить навыки и добавить немного любви.</p>
+                        <p class="hidden-text__second-text">Как и любая другая специальность, профессия бариста делиться подразумевает несколько направлений.</p>
+                        <p class="hidden-text__third-text">Самостоятельно полученными знаниями тут не обойтись.</p>
+                        <p class="hidden-text__fourth-text">Предлагаем ознакомиться с программами:</p>
+                        <ul class="hidden-text__second-list">
+                            <li>Команда наставников поддержит ваши начинания и стремление проявить креатив.</li>
+                            <li>Весь материал систематизирован для легкого восприятия, запоминания.</li>
+                            <li>После практики, казалось бы сложные задачи будут выполняться на автоматическом уровне.</li>
+                            <li>Вы научитесь не только различать виды напитков (латте, мокко, капучино), но и разбираться в сортах кофе.</li>
+                            <li>Предстоит освоить уникальные сентенции вкуса, используя для варки экзотические, необычные ингредиенты.</li>
+                        </ul>
+                        <h3 class="hidden-text__third-header">Преимущества наших учеников</h3>
+                        <p class="hidden-text__fifth-text">Школа бариста открывает массы возможностей. Поэтапное изучение теории всегда закрепляется на практике. Каждое занятие окажется новым открытием.</p>
+                        <ul class="hidden-text__third-list">
+                            <li>Команда наставников поддержит ваши начинания и стремление проявить креатив.</li>
+                            <li>Весь материал систематизирован для легкого восприятия, запоминания.</li>
+                            <li>После практики, казалось бы сложные задачи будут выполняться на автоматическом уровне.</li>
+                            <li>Вы научитесь не только различать виды напитков (латте, мокко, капучино), но и разбираться в сортах кофе.</li>
+                            <li>Предстоит освоить уникальные сентенции вкуса, используя для варки экзотические, необычные ингредиенты.</li>
+                        </ul>
+                        <p class="hidden-text__sixth-text">На нашем сайте можно ознакомиться с отзывами учеников. <span class="brand">«COFFEE POISON»</span> будет стартом головокружительной карьеры и для этого достаточно по-настоящему любить кофе! Записывайтесь, приходите на курсы бариста, получайте действительно полезные умения и знания уже сегодня!</p>
+                    </div>
+                </div>
+                <a href="" class="about-box__more"><i class="fas fa-chevron-down"></i></a>
             </div>
         </section>
         <section id="map">
             <div class="map-box">
                 <h2 class="map-box__title">Как нас найти</h2>
+                <div id="map-wrapper">
+                    <div class="info-text">
+                        <b>Адрес:</b>
+                        <p>г. Киев, ул. Богдана Хмельницкого 16/22</p>
+                        <b>Контакты:</b>
+                        <p><a href="tel:+380937449212">+38 (093) 744 92 12</a><br> <a href="tel:+38066487775">+38 (066) 484 77 75</a></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
     <footer id="footer">
-        <div class="footer-box">
-            <h2 class="footer-box__title">Контакты</h2>
-            <img src="img/logo.png" alt="" class="footer-box__logo" width="100" height="100">
-            <div class="footer-box__social">
-                <h3>Следите за нами</h3>
-                <div>
-                    <a href="" target="_blank" rel="nofollow noopener"><i></i></a>
-                    <a href="" target="_blank" rel="nofollow noopener"><i></i></a>
-                    <a href="" target="_blank" rel="nofollow noopener"><i></i></a>
+        <div class="footer-box container">
+            <div class="footer-box__content">
+                <img src="img/logo.png" alt="логотип «Coffee Poison»" width="100" height="100">
+                <div class="social-box">
+                    <h2 class="social-box__title">Следите за нами</h2>
+                    <ul class="social-box__links">
+                        <li><a href="https://facebook.com/CoffeePoizon" target="_blank" rel="nofollow noopener"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="https://www.instagram.com/coffee_poison3" target="_blank" rel="nofollow noopener"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC55zmIGPzCVIPI7jQeA-T8A" target="_blank" rel="nofollow noopener"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="contacts-box">
+                    <h2 class="contacts-box__title">Наши контакты</h2>
+                    <span class="contacts-box__address">г. Киев, ул. Богдана Хмельницкого 16/22</span>
+                    <a href="tel:+380937449212">+38 (093) 744 92 12</a>
+                    <a href="tel:+38066487775">+38 (066) 484 77 75</a>
                 </div>
             </div>
-            <div class="footer-box__address">
-                <h3>Наши контакты</h3>
-                <span>г. Киев ул. Богдана Хмельницкого 16/22</span>
-                <a href="tel:+380937449212"><b>Тел.</b> +380937449212</a>
-                <a href="tel:+380997323943"><b>Тел.</b> +380997323943</a>
+            <div class="footer-box__developed">
+                <a href="https://webmaster-cube.ru/" target="_blank">Разработка сайта веб-студия <span class="web-studio">Webmaster Cube</span></a>
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <i id="scrollTop" class="fas fa-arrow-circle-up"></i>
+    <div id="form-popup" class="mfp-hide">
+        <h2>Заполните форму</h2>
+        <form id="form" action="contact.php" method="post">
+            <input type="text" name="name" id="form-name" placeholder="Александр" required>
+            <input type="tel" name="phone" id="form-phone" placeholder="+38 (099) 999 99 99" required>
+            <button type="submit">Записаться</button>
+        </form>
+    </div>
+    <div id="order-popup" class="mfp-hide">
+        <h2>Заполните форму</h2>
+        <form id="order" action="order.php" method="post">
+            <input type="text" name="name" id="order-name" placeholder="Александр" required>
+            <input type="tel" name="phone" id="order-phone" placeholder="+38 (099) 999 99 99" required>
+            <button type="submit">Заказать</button>
+        </form>
+    </div>
+    <div id="base-popup" class="mfp-hide">
+        <h2>Курс «База»</h2>
+        <h3>Содержания курса:</h3>
+        <ul>
+            <li>обзор основных узлов и агрегатов профессиональной кофемолки</li>
+            <li>обзор основных узлов и агрегатов профессиональной кофеварки</li>
+            <li>обзор профессиональных аксессуаров бариста</li>
+            <li>настройка профессиональной кофемашины</li>
+            <li>настройка помола</li>
+            <li>основные виды обжарки кофейных зерен</li>
+            <li>сорта кофейных зерен</li>
+            <li>моносорта кофейных зерен</li>
+            <li>купаж</li>
+            <li>практические занятия по приготовлению стандартной кофейной карты:
+                <ul>
+                    <li>ристретто</li>
+                    <li>эспрессо</li>
+                    <li>эспрессо-лунго</li>
+                    <li>доппио</li>
+                    <li>американо</li>
+                    <li>капучино</li>
+                    <li>латте</li>
+                    <li>макиато</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Продолжительность курса:</h3>
+        <p>12 академических часов</p>
+    </div>
+    <div id="latte-popup" class="mfp-hide">
+        <h2>Курс «Латте Арт»</h2>
+        <h3>Содержания курса:</h3>
+        <ul>
+            <li>питчинг</li>
+            <li>этчинг</li>
+            <li>мультиарт</li>
+            <li>3D латте арт</li>
+        </ul>
+        <h3>Продолжительность курса:</h3>
+        <p>10 академических часов</p>
+    </div>
+    <div id="business-popup" class="mfp-hide">
+        <h2>Курс «Бизнес»</h2>
+        <h3>Содержания курса:</h3>
+        <ul>
+            <li>необходимые регистрационные документы для открытия кофейни</li>
+            <li>маркетинговое исследование потенциального места открытия</li>
+            <li>форматы кофеен</li>
+            <li>целевые аудитории</li>
+            <li>адаптирование ассортимента продукции под целевую аудиторию</li>
+            <li>порог рентабельности и сроки окупаемости инвестиций</li>
+            <li>калькуляционные и технологические карты</li>
+            <li>методы контроля и управления персоналом</li>
+            <li>система учёта денежных потоков</li>
+        </ul>
+        <h3>Продолжительность курса:</h3>
+        <p>10-12 академических часов</p>
+    </div>
+    <div id="success" class="mfp-hide">
+        <p class="message">Спасибо за оставленную заявку.<br> Наш менеджер свяжется с вами в течении 15-ти минут.</p>
+    </div>
+    <div id="fail" class="mfp-hide">
+        <p class="message">Ошибка. Данные не отправлены.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        function initMap() {
+            var map, marker, infoWindow, infoWindowTex = $('.info-text').html(), mapContainer = $('#map-wrapper')[0], mapCenter = {lat: 50.4461642, lng: 30.5157498};
+            map = new google.maps.Map(mapContainer, {
+                center: mapCenter,
+                zoom: 17
+            });
+            marker = new google.maps.Marker({
+                position: mapCenter,
+                map: map,
+                icon: "img/favicon/apple-icon-60x60.png"
+            });
+
+            infoWindow = new google.maps.InfoWindow({
+                content: infoWindowTex
+            });
+            infoWindow.open(map, marker);
+
+            marker.addListener('click', function () {
+                infoWindow.open(map, marker);
+            });
+
+            google.maps.addDomListener(window, 'resize', function () {
+                var center = $map.getCenter();
+                google.maps.event.trigger(map, 'resize');
+                map.setCenter(center);
+            })
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDixtu_9jj2SumH7G8M6YTAybFP0y-QsnE&language=ru&callback=initMap" async defer></script>
 </body>
 </html>

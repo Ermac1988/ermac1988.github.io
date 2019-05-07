@@ -1,0 +1,369 @@
+#prices {
+  background-color: $lightgreenRatesBackground;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  & .prices-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    @include e(title) {
+      font-size: 24px;
+      font-family: $lato;
+      font-weight: 700;
+      color: $bordoRatesTitle;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    @include e(items) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 35px;
+      @include m(left) {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        & img {
+          width: 100%;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: stretch;
+          align-items: center;
+          background-image: url("../img/prices-bg.png");
+          background-color: $white;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          & h3 {
+            font-size: 36px;
+            font-family: $lato;
+            font-weight: 400;
+            color: $black;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            margin-top: 20px;
+          }
+          & span {
+            font-size: 16px;
+            font-family: $lato;
+            font-weight: 700;
+            color: $orangeRatesPriceText;
+            text-align: center;
+            margin-bottom: 25px;
+          }
+          & p {
+            font-size: 22px;
+            font-family: $lato;
+            font-weight: 400;
+            color: $grayRatesText;
+            text-align: center;
+            margin-bottom: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+        & a:nth-of-type(1) {
+          font-size: 22px;
+          font-family: $lato;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+          text-decoration: none;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+          background-color: $lightorangeRatesButtonBackground;
+          margin-bottom: 25px;
+          border: none;
+          outline: none;
+          transition-property: background-color;
+          transition-timing-function: ease-out;
+          transition-duration: 0.3s;
+          &:hover {
+            background-color: $bordoRatesButtonBackground;
+            transition-property: background-color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+        & a:nth-of-type(2) {
+          font-size: $baseFontSize;
+          font-family: $lato;
+          font-weight: 400;
+          color: $darkergrayRatesText;
+          text-align: center;
+          text-decoration: none;
+          padding-left: 15px;
+          padding-right: 15px;
+          border: none;
+          outline: none;
+          transition-property: color;
+          transition-timing-function: ease-out;
+          transition-duration: 0.3s;
+          &:before {
+            content: '\f05a';
+            font-size: 20px;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px;
+          }
+          &:hover {
+            color: $bordoRatesButtonBackground;
+            transition-property: color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+      }
+      @include m(center) {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        & img {
+          width: 100%;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: stretch;
+          align-items: center;
+          background-image: url("../img/prices-bg.png");
+          background-color: $white;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          & h3 {
+            font-size: 36px;
+            font-family: $lato;
+            font-weight: 400;
+            color: $black;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            margin-top: 20px;
+          }
+          & span {
+            font-size: 16px;
+            font-family: $lato;
+            font-weight: 700;
+            color: $orangeRatesPriceText;
+            text-align: center;
+            margin-bottom: 25px;
+          }
+          & p {
+            font-size: 22px;
+            font-family: $lato;
+            font-weight: 400;
+            color: $grayRatesText;
+            text-align: center;
+            margin-bottom: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+        & a:nth-of-type(1) {
+          font-size: 22px;
+          font-family: $lato;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+          text-decoration: none;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+          background-color: $lightorangeRatesButtonBackground;
+          margin-bottom: 25px;
+          border: none;
+          outline: none;
+          transition-property: background-color;
+          transition-timing-function: ease-out;
+          transition-duration: 0.3s;
+          &:hover {
+            background-color: $bordoRatesButtonBackground;
+            transition-property: background-color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+        & a:nth-of-type(2) {
+          font-size: $baseFontSize;
+          font-family: $lato;
+          font-weight: 400;
+          color: $darkergrayRatesText;
+          text-align: center;
+          text-decoration: none;
+          padding-left: 15px;
+          padding-right: 15px;
+          border: none;
+          outline: none;
+          transition-property: color;
+          transition-timing-function: ease-out;
+          transition-duration: 0.3s;
+          &:before {
+            content: '\f05a';
+            font-size: 20px;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px;
+          }
+          &:hover {
+            color: $bordoRatesButtonBackground;
+            transition-property: color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+      }
+      @include m(right) {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        flex-basis: 100%;
+        & img {
+          width: 100%;
+        }
+        & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: stretch;
+          align-items: center;
+          background-image: url("../img/prices-bg.png");
+          background-color: $white;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          & h3 {
+            font-size: 36px;
+            font-family: $lato;
+            font-weight: 400;
+            color: $black;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            margin-top: 20px;
+          }
+          & span {
+            font-size: 16px;
+            font-family: $lato;
+            font-weight: 700;
+            color: $orangeRatesPriceText;
+            text-align: center;
+            margin-bottom: 25px;
+          }
+          & p {
+            font-size: 22px;
+            font-family: $lato;
+            font-weight: 400;
+            color: $grayRatesText;
+            text-align: center;
+            margin-bottom: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+        & a:nth-of-type(1) {
+          font-size: 22px;
+          font-family: $lato;
+          font-weight: 400;
+          color: $white;
+          text-align: center;
+          text-decoration: none;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+          background-color: $lightorangeRatesButtonBackground;
+          margin-bottom: 25px;
+          border: none;
+          outline: none;
+          transition-property: background-color;
+          transition-timing-function: ease-in;
+          transition-duration: 0.3s;
+          &:hover {
+            background-color: $bordoRatesButtonBackground;
+            transition-property: background-color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+        & a:nth-of-type(2) {
+          font-size: $baseFontSize;
+          font-family: $lato;
+          font-weight: 400;
+          color: $darkergrayRatesText;
+          text-align: center;
+          text-decoration: none;
+          padding-left: 15px;
+          padding-right: 15px;
+          border: none;
+          outline: none;
+          transition-property: background-color;
+          transition-timing-function: ease-in;
+          transition-duration: 0.3s;
+          &:before {
+            content: '\f05a';
+            font-size: 20px;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 5px;
+          }
+          &:hover {
+            color: $bordoRatesButtonBackground;
+            transition-property: color;
+            transition-timing-function: ease-in;
+            transition-duration: 0.3s;
+          }
+        }
+      }
+    }
+    @include e(button) {
+      font-size: $baseFontSize;
+      font-family: $lato;
+      font-weight: 700;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background-color: $bordoRatesButtonBackground;
+      border: none;
+      outline: none;
+      transition-property: background-color;
+      transition-timing-function: ease-out;
+      transition-duration: 0.3s;
+      &:hover {
+        background-color: $lightorangeRatesButtonBackground;
+        transition-property: background-color;
+        transition-timing-function: ease-in;
+        transition-duration: 0.3s;
+      }
+      &:before {
+        content: '\f095';
+        display: inline-block;
+        font-size: $baseFontSize;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        transform: rotate(140deg);
+        margin-right: 5px;
+      }
+    }
+  }
+}

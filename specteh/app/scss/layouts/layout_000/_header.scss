@@ -1,0 +1,246 @@
+header {
+  background-color: $white;
+  padding-top: 30px;
+  padding-bottom: 65px;
+  & h1 {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+  }
+  & .header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include e(navigation) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 15px;
+      & .logo-box {
+        display: flex;
+        order: 2;
+        & img {
+          width: 85px;
+          height: 75px;
+        }
+      }
+      & .shedule-box {
+        display: none;
+        & b {
+        }
+      }
+      & .nav-box {
+        order: 1;
+        & h2 {
+          position: absolute;
+          left: -9999px;
+          top: -9999px;
+        }
+        @include e(icon) {
+          display: flex;
+          flex-direction: column;
+          justify-content: stretch;
+          align-items: center;
+          width: 30px;
+          height: 25px;
+          cursor: pointer;
+          & span {
+            width: 100%;
+            height: 5px;
+            border-radius: 10px;
+            background-color: $mainYellow;
+            transform: rotate(0deg);
+            transition-property: transform;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            margin-bottom: 5px;
+            &:nth-last-child(1) {
+              margin-bottom: 0;
+            }
+          }
+        }
+        @include e(items) {
+          display: none;
+          & li {
+            &:nth-last-child(1) {
+            }
+            & a {
+              font-size: 17px;
+              font-family: $openSans;
+              font-weight: 400;
+              color: $black;
+              text-align: center;
+              text-decoration: none;
+              &:hover {
+                color: $mainYellow;
+              }
+            }
+          }
+        }
+      }
+      & .mobile-callback-box {
+        display: inline-block;
+        order: 3;
+        font-size: 30px;
+        font-family: $openSans;
+        font-weight: 700;
+        color: $mainYellow;
+        text-align: center;
+        & i {
+            transform: rotate(100deg);
+          }
+      }
+      & .callback-box {
+        display: none;
+        & a {
+        }
+      }
+      & .phones-box {
+        display: none;
+      }
+      & .open > .nav-box__icon {
+        & span:nth-child(1) {
+          position: relative;
+          top: 10px;
+          transform: rotate(-45deg);
+          margin-bottom: 0;
+          transition-property: transform;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in;
+        }
+        & span:nth-child(2) {
+          display: none;
+        }
+        & span:nth-child(3) {
+          position: relative;
+          top: 5px;
+          transform: rotate(45deg);
+          transition-property: transform;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-in;
+        }
+      }
+      & .open > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: $white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 5px;
+        & li {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          & a {
+            font-weight: bold;
+            color: $black;
+            text-decoration: none;
+            &:hover {
+              color: $mainYellow;
+            }
+          }
+        }
+      }
+    }
+    & .mobile-shedule-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 17px;
+      font-family: $openSans;
+      font-weight: 400;
+      color: $black;
+      margin-bottom: 45px;
+      text-align: center;
+      & b {
+        font-size: 24px;
+        font-family: $openSans;
+        font-weight: 700;
+        color: $mainYellow;
+        text-align: center;
+        margin-left: 10px;
+      }
+    }
+    @include e(content) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & .img-box {
+        position: relative;
+        margin-bottom: 30px;
+        @include e(text) {
+          font-size: 24px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $black;
+          position: absolute;
+          top: -30px;
+          left: 30%;
+          transform: rotate(-5deg);
+          & b:nth-child(1) {
+            font-size: 30px;
+            font-family: $openSans;
+            font-weight: 700;
+            color: $mainYellow;
+          }
+          & b:nth-child(2) {
+            font-size: 25px;
+            font-family: $openSans;
+            font-weight: 700;
+            color: $mainYellow;
+          }
+        }
+        @include e(img) {
+        }
+      }
+      & .text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include e(header) {
+          font-size: 22px;
+          font-family: $openSans;
+          font-weight: 700;
+          color: $black;
+          text-align: center;
+          line-height: 30px;
+          margin-bottom: 15px;
+        }
+        @include e(subtitle) {
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 300;
+          color: $grayText;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        @include e(button) {
+          font-size: 16px;
+          font-family: $openSans;
+          font-weight: 400;
+          color: $black;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          outline: none;
+          &:hover {
+            color: $white;
+            background: $black;
+            box-shadow: 0 9px 21px rgba(0, 0, 0, 0.84);
+          }
+        }
+      }
+    }
+  }
+}

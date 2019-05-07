@@ -1,0 +1,117 @@
+#works-page {
+  background-color: $white;
+  margin-bottom: 55px;
+  & .works-page-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      font-size: 12px;
+      font-family: $openSans;
+      font-weight: 400;
+      text-align: left;
+      color: $mainTextColor;
+      text-transform: uppercase;
+      border-top: 1px solid #999;
+      padding-top: 15px;
+      margin-bottom: 35px;
+    }
+    @include e(works) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      & .mix-it-up-filters {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+        @include e(control) {
+          font-size: 12px;
+          font-family: $openSans;
+          font-weight: 400;
+          text-align: left;
+          color: $mainTextColor;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          cursor: pointer;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 25px;
+          padding-right: 25px;
+          margin-bottom: 5px;
+          transition-property: border;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+          &:nth-last-of-type(1) {
+            margin-bottom: 0;
+          }
+          &:hover {
+            transition-property: border;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+            border: 1px solid $blue;
+          }
+        }
+        & .mixitup-control-active {
+          border: 1px solid $blue;
+          background-color: $blue;
+          color: $white;
+        }
+      }
+      & .mix-it-up-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        & .item-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+          width: 100%;
+          margin-bottom: 30px;
+          &:nth-last-of-type(1) {
+            margin-bottom: 0;
+          }
+          @include e(link) {
+            display: flex;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            margin-bottom: 15px;
+            &:hover img {
+              opacity: 0.5;
+              transition-property: opacity;
+              transition-timing-function: ease-in;
+              transition-duration: 0.3s;
+            }
+            & img {
+              max-height: 200px;
+              opacity: 1;
+              transition-property: opacity;
+              transition-timing-function: ease-out;
+              transition-duration: 0.3s;
+            }
+          }
+          @include e(header) {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: left;
+            color: $mainTextColor;
+            margin-bottom: 5px;
+          }
+          @include e(text) {
+            font-size: 12px;
+            font-family: $openSans;
+            font-weight: 400;
+            text-align: left;
+            color: $mainTextColor;
+          }
+        }
+      }
+    }
+  }
+}

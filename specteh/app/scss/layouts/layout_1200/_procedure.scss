@@ -1,0 +1,28 @@
+#procedure {
+  padding-top: 105px;
+  padding-bottom: 0;
+  & .procedure-box {
+    @include e(header) {
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 35px;
+    }
+    @include e(stages) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      & .stage-box {
+        width: 25%;
+        margin-bottom: 0;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+        @include e(img) {
+          margin-right: 15px;
+        }
+        @include e(text) {
+        }
+      }
+    }
+  }
+}

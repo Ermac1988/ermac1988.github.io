@@ -1,0 +1,13 @@
+#header {
+  height: calc(100vh - 85px);
+  & .header-box {
+    @include e(logo) {
+    }
+    @include e(slogan) {
+      & span {
+      }
+    }
+    @include e(social) {
+    }
+  }
+}

@@ -1,0 +1,37 @@
+#equipment {
+  padding-top: 85px;
+  & .equipment-box {
+    @include e(header) {
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+    @include e(containers) {
+      flex-direction: row;
+      align-items: stretch;
+      & .container-box {
+        margin-bottom: 0;
+        margin-right: 30px;
+        width: 33%;
+        &:nth-last-of-type(1) {
+          margin-right: 0;
+        }
+        @include e(header) {
+        }
+        @include e(img) {
+        }
+        & hr {
+        }
+        @include e(capacity) {
+        }
+        @include e(service) {
+        }
+        @include e(price) {
+          & b {
+          }
+        }
+        @include e(button) {
+        }
+      }
+    }
+  }
+}

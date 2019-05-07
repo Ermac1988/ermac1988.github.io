@@ -1,0 +1,72 @@
+#about {
+  & .about-box {
+    &:before {
+    }
+    &:after {
+    }
+    @include e(header) {
+      font-size: 48px;
+    }
+    @include e(text) {
+      & .visible-text {
+        flex-direction: row;
+        align-items: stretch;
+        @include e(first-text) {
+          margin-bottom: 0;
+          margin-right: 15px;
+          width: 50%;
+        }
+        @include e(second-text) {
+          margin-left: 15px;
+          width: 50%;
+        }
+      }
+      & .hidden-text {
+        @include e(first-header) {
+        }
+        @include e(second-header) {
+        }
+        @include e(third-header) {
+        }
+        @include e(first-list) {
+          & li {
+            &:nth-last-of-type(1) {
+            }
+            &:before {
+            }
+          }
+        }
+        @include e(second-list) {
+          & li {
+            &:nth-last-of-type(1) {
+            }
+            &:before {
+            }
+          }
+        }
+        @include e(first-text) {
+        }
+        @include e(second-text) {
+        }
+        @include e(third-text) {
+        }
+        @include e(fourth-text) {
+        }
+        @include e(fifth-text) {
+        }
+        @include e(sixth-text) {
+          & a {
+          }
+        }
+        @include e(seventh-text) {
+        }
+      }
+      .show {
+      }
+    }
+    @include e(more) {
+      & i {
+      }
+    }
+  }
+}

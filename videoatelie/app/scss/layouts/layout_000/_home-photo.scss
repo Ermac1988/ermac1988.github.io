@@ -1,0 +1,109 @@
+#home-photo {
+  background-color: $white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  & .home-photo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    @include e(header) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      font-size: 33px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 10px;
+      &:before {
+        content: url("../img/photo.png");
+      }
+    }
+    @include e(subheader) {
+      font-size: 20px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $mainTextColor;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    @include e(photos) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin-bottom: 30px;
+      & .slick-slide {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      & .photo-slider-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        & a {
+          display: flex;
+          align-self: center;
+          margin-bottom: 20px;
+          position: relative;
+          &:before {
+            display: none;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-image: url("../img/view.png");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+          }
+          &:hover {
+            &:before {
+              display: flex;
+            }
+          }
+          & img {
+            height: 100%;
+          }
+        }
+      }
+    }
+    @include e(button) {
+      align-self: center;
+      font-size: 24px;
+      font-family: $cocosignum;
+      font-weight: 400;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 35px;
+      padding-right: 35px;
+      background-color: $pink;
+      border: 1px solid transparent;
+      outline: none;
+      transition-property: all;
+      transition-timing-function: ease-out;
+      transition-duration: 0.3s;
+      border-radius: 10px;
+      &:hover {
+        color: $pink;
+        border: 1px solid $pink;
+        background-color: $white;
+        transition-property: all;
+        transition-timing-function: ease-in;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+}

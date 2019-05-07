@@ -1,0 +1,95 @@
+#projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: $white;
+  border-bottom: 3px solid $yellow;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  & .projects-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include e(header) {
+      font-size: 30px;
+      font-family: $openSans;
+      font-weight: 700;
+      color: $yellow;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    @include e(item) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      & a {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        margin-bottom: 20px;
+        &:nth-last-of-type(1) {
+          margin-bottom: 0;
+        }
+        &:hover {
+          & p {
+            transition-property: opacity;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-in;
+            opacity: 0.9;
+          }
+        }
+        & img {
+          border-radius: 5px;
+        }
+        & p {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 2;
+          opacity: 0;
+          font-size: 24px;
+          font-family: $openSans;
+          font-weight: 700;
+          color: $yellow;
+          text-align: center;
+          text-decoration: none;
+          transition-property: opacity;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+          background-image: url("../img/about-bg.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50% 50%;
+          background-color: $headerBackground;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
